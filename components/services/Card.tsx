@@ -9,7 +9,6 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ title, icon, description }) => {
   return (
-    // <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
     <div className="rounded-lg hover:bg-black hover:shadow-lg px-4 py-8 h-[240px] ease-out duration-700">
       <div className="flex items-center gap-4 py-2">
         <div className="bg-blue-400 rounded-lg p-2">{icon}</div>
@@ -17,7 +16,6 @@ const Card: React.FC<CardProps> = ({ title, icon, description }) => {
       </div>
       <p>{description}</p>
     </div>
-    // </motion.div>
   );
 };
 
