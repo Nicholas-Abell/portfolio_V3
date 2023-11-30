@@ -27,8 +27,9 @@ const FramerMotionWrapper: React.FC<FramerMotionWrapperProps> = ({
       <motion.div
         variants={{
           fromBottom: { y: 200, opacity: 0 },
-          fromLeft: { y: 0 },
-          visible: { y: 0, opacity: 1 },
+          fromLeft: { x: -200, opacity: 0 },
+          fromRight: { x: 200, opacity: 0 },
+          visible: { y: 0, x: 0, opacity: 1 },
         }}
         animate={mainControls}
         transition={{ duration: 1.5 }}
