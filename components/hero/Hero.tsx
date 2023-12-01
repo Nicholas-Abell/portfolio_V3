@@ -2,18 +2,18 @@
 import React from "react";
 import Image from "next/image";
 import profileImage from "../../public/profile.png";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 type HeroProps = {};
 
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <section className="w-full min-h-screen test flex flex-col md:flex-row justify-center items-center gap-8">
+    <section className="w-full min-h-screen flex flex-col md:flex-row justify-center items-center gap-8 mx-auto px-2.5 md:px-20">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col justify-center gap-8 test"
+        className="flex flex-col justify-center gap-8"
       >
         <p>Hello There, I am</p>
         <h1 className="text-4xl md:text-6xl font-bold">Nicholas Abell</h1>

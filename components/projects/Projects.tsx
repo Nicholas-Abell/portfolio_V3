@@ -1,5 +1,4 @@
 "use client";
-import { motion, useInView } from "framer-motion";
 import React from "react";
 import { FiActivity } from "react-icons/fi";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
@@ -8,7 +7,7 @@ type ProjectsProps = {};
 
 const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col justify-center items-center gap-4 overflow-hidden">
+    <section className="w-full min-h-screen flex flex-col justify-center items-center gap-4 overflow-hidden mx-auto px-2.5 md:px-20">
       <FramerMotionWrapper variant="fromBottom">
         <h2 className="text-center text-4xl md:text-6xl py-4">
           Personal Projects

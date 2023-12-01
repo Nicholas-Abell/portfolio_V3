@@ -9,7 +9,7 @@ type TestimonialsProps = {};
 
 const Testimonials: React.FC<TestimonialsProps> = () => {
   return (
-    <section className="w-full min-h-screen">
+    <section className="w-full min-h-screen bg-[#f5eef0] mx-auto px-2.5 md:px-20">
       <FramerMotionWrapper variant="fromBottom">
         <h2 className="text-center text-3xl md:text-6xl font-bold py-8">
           Testimonials
