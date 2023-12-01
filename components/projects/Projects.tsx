@@ -48,17 +48,17 @@ const Projects: React.FC<ProjectsProps> = () => {
       </div>
 
       <div className="w-full flex flex-col-reverse md:flex-row-reverse items-center justify-center px-4 py-12">
-        <div className="w-full z-[-50]">
-          <div className="bg-gray-700 w-full h-[420px] z-[-50]" />
+        <div className="w-full">
+          <div className="bg-gray-700 w-full h-[420px]" />
         </div>
-        <div className="md:w-[90%] md:h-[420px] md:ml-[120px] flex flex-col md:justify-between z-50">
+        <div className="md:w-[90%] md:h-[420px] md:ml-[120px] flex flex-col md:justify-between z-10">
           <div>
             <FramerMotionWrapper variant="fromLeft">
               <p className="pb-2">Featured Project</p>
               <h3 className="text-5xl">Reddit Clone</h3>
             </FramerMotionWrapper>
           </div>
-          <div className="bg-[#dbecfd] py-4 md:px-8 rounded-lg z-50">
+          <div className="bg-[#dbecfd] py-4 md:px-8 rounded-lg z-0">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Quibusdam dolore quod alias accusamus numquam corrupti
@@ -81,10 +81,10 @@ const Projects: React.FC<ProjectsProps> = () => {
       </div>
 
       <div className="w-full flex flex-col-reverse md:flex-row items-center justify-center px-4 py-24">
-        <div className="w-full z-[-50]">
-          <div className="bg-gray-700 w-full h-[420px] z-[-50]" />
+        <div className="w-full">
+          <div className="bg-gray-700 w-full h-[420px]" />
         </div>
-        <div className="md:w-[90%] md:h-[420px] md:ml-[-120px] flex flex-col md:justify-between z-50">
+        <div className="md:w-[90%] md:h-[420px] md:ml-[-120px] flex flex-col md:justify-between z-10">
           <div>
             <FramerMotionWrapper variant="fromRight">
               <p className="md:text-end pb-2">Featured Project</p>
@@ -113,7 +113,7 @@ const Projects: React.FC<ProjectsProps> = () => {
         </div>
       </div>
       <div className="w-full relative">
-        <div className="bg-[#f5eef0] h-[320px] w-[80vw] absolute top-0 left-80 -z-50 rounded-xl" />
+        <div className="bg-[#f5eef0] h-[320px] w-[100vw] absolute top-0 lg:left-80 left-40 -z-50 rounded-xl" />
         <FramerMotionWrapper variant="fromLeft">
           <h2 className="text-4xl md:text-6xl pb-4 pt-24">
             Other Noteworthy Projects
@@ -121,7 +121,7 @@ const Projects: React.FC<ProjectsProps> = () => {
         </FramerMotionWrapper>
 
         <FramerMotionWrapper variant="fromBottom">
-          <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4 py-4 px-24">
+          <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4 py-4 lg:px-24">
             <div className="bg-gray-400 h-[320px] rounded-lg" />
             <div className="bg-gray-400 h-[320px] rounded-lg" />
             <div className="bg-gray-400 h-[320px] rounded-lg" />
