@@ -34,7 +34,7 @@ const FramerMotionWrapper: React.FC<FramerMotionWrapperProps> = ({
           visible: { y: 0, x: 0, opacity: 1 },
         }}
         animate={mainControls}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.2 }}
         initial={variant}
       >
         {children}
