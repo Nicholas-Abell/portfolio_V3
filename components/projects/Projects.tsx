@@ -1,37 +1,31 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import React from "react";
 import { FiActivity } from "react-icons/fi";
+import FramerMotionWrapper from "../shared/FramerMotionWrapper";
 
 type ProjectsProps = {};
 
 const Projects: React.FC<ProjectsProps> = () => {
   return (
     <section className="w-full min-h-screen flex flex-col justify-center items-center gap-4 overflow-hidden">
-      <motion.div
-        initial={{ y: 200, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      <FramerMotionWrapper variant="fromBottom">
         <h2 className="text-center text-4xl md:text-6xl py-4">
           Personal Projects
         </h2>
-      </motion.div>
-      <div className="w-full flex items-center justify-center px-4 py-2">
+      </FramerMotionWrapper>
+
+      <div className="w-full flex flex-col-reverse md:flex-row items-center justify-center px-4 py-2">
         <div className="w-full">
           <div className="bg-gray-700 w-full h-[420px]" />
         </div>
-        <motion.div
-          initial={{ x: 200, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <div className="w-[90%] h-[420px] ml-[-120px] flex flex-col justify-between">
+        <FramerMotionWrapper variant="fromRight">
+          <div className="md:w-[90%] md:h-[420px] md:ml-[-120px] flex flex-col md:justify-between z-10">
             <div>
-              <p className="text-end pb-2">Featured Project</p>
-              <h3 className="text-5xl text-end">Reddit Clone</h3>
+              <p className="md:text-end pb-2">Featured Project</p>
+              <h3 className="text-5xl md:text-end">Reddit Clone</h3>
             </div>
-            <div className="bg-black py-4 px-8 rounded-lg">
+            <div className="bg-black py-4 md:px-8 rounded-lg">
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Quibusdam dolore quod alias accusamus numquam corrupti
@@ -51,7 +45,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               <FiActivity size={40} />
             </div>
           </div>
-        </motion.div>
+        </FramerMotionWrapper>
       </div>
       <h2 className="text-center text-4xl md:text-6xl py-4">
         Other Noteworthy Projects

@@ -23,7 +23,7 @@ const FramerMotionWrapper: React.FC<FramerMotionWrapperProps> = ({
   }, [isInView, mainControls]);
 
   return (
-    <div ref={ref} className="relative overflow-hidden">
+    <div ref={ref} className="relative overflow-hidden w-full">
       <motion.div
         variants={{
           fromBottom: { y: 200, opacity: 0 },

@@ -3,27 +3,19 @@ import React from "react";
 import Card from "./Card";
 import profileImage from "../../public/profile.png";
 import mary from "../../public/mary-kleine.jpg";
-import { motion } from "framer-motion";
+import FramerMotionWrapper from "../shared/FramerMotionWrapper";
 
 type TestimonialsProps = {};
 
 const Testimonials: React.FC<TestimonialsProps> = () => {
   return (
     <section className="w-full min-h-screen">
-      <motion.div
-        initial={{ y: 200, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      <FramerMotionWrapper variant="fromBottom">
         <h2 className="text-center text-3xl md:text-6xl font-bold py-8">
           Testimonials
         </h2>
-      </motion.div>
-      <motion.div
-        initial={{ y: 200, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      </FramerMotionWrapper>
+      <FramerMotionWrapper variant="fromBottom">
         <div className="grid lg:grid-cols-3 py-4 gap-4">
           <Card
             name="Mary"
@@ -44,7 +36,7 @@ const Testimonials: React.FC<TestimonialsProps> = () => {
             content="lorem ipsadjf sdjfbkasjd flasdijfoiasenf lsajdfhn ca,sdfhoasild fjsfdh"
           />
         </div>
-      </motion.div>
+      </FramerMotionWrapper>
     </section>
   );
 };
