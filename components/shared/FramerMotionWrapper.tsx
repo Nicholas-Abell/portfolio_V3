@@ -5,11 +5,13 @@ import React, { ReactNode, useEffect, useRef } from "react";
 type FramerMotionWrapperProps = {
   children: ReactNode;
   variant: "fromBottom" | "fromRight" | "fromLeft";
+  className?: string;
 };
 
 const FramerMotionWrapper: React.FC<FramerMotionWrapperProps> = ({
   children,
   variant,
+  className,
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -23,7 +25,7 @@ const FramerMotionWrapper: React.FC<FramerMotionWrapperProps> = ({
   }, [isInView, mainControls]);
 
   return (
-    <div ref={ref} className="relative overflow-hidden w-full">
+    <div ref={ref} className={`overflow-hidden w-full ${className}`}>
       <motion.div
         variants={{
           fromBottom: { y: 200, opacity: 0 },
