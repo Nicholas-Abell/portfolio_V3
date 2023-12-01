@@ -9,7 +9,7 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ title, icon, description }) => {
   return (
-    <div className="rounded-lg relative hover:bg-gray-200 hover:cursor-pointer hover:shadow-lg px-4 py-8 h-[240px] ease-out duration-700">
+    <div className="rounded-lg relative shadow-[#f5eef0] hover:shadow-xl px-4 py-8 h-[240px] ease-out duration-700">
       <div className="flex items-center gap-4 py-2">
         <div className="bg-blue-400 rounded-lg p-2">{icon}</div>
         <p className="font-bold text-xl">{title}</p>
