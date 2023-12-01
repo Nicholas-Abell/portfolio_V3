@@ -114,20 +114,25 @@ const Projects: React.FC<ProjectsProps> = () => {
       </div>
       <div className="w-full relative">
         <div className="bg-[#f5eef0] h-[320px] w-[80vw] absolute top-0 left-80 -z-50 rounded-xl" />
-        <h2 className="text-4xl md:text-6xl pb-4 pt-24">
-          Other Noteworthy Projects
-        </h2>
-        <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4 py-4 px-24">
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-          <div className="bg-gray-400 h-[320px] rounded-lg" />
-        </div>
+        <FramerMotionWrapper variant="fromLeft">
+          <h2 className="text-4xl md:text-6xl pb-4 pt-24">
+            Other Noteworthy Projects
+          </h2>
+        </FramerMotionWrapper>
+
+        <FramerMotionWrapper variant="fromBottom">
+          <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4 py-4 px-24">
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <div className="bg-gray-400 h-[320px] rounded-lg" />
+          </div>
+        </FramerMotionWrapper>
       </div>
     </section>
   );
