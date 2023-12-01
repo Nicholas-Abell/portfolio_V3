@@ -2,9 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-//test
-import { FiAlertCircle } from "react-icons/fi";
-
 type CardProps = {
   content: string;
   name: string;
@@ -19,10 +16,10 @@ const Card: React.FC<CardProps> = ({ content, name, link, image }) => {
         src={image}
         width={160}
         height={160}
-        className=" rounded-full translate-y-1/2"
+        className=" rounded-full translate-y-1/2 border-8 border-[#f5eef0] border-solid"
         alt="a"
       />
-      <div className="w-full bg-gray-500 p-8 rounded-lg min-h-[480px] flex flex-col items-center justify-between gap-8 pt-32">
+      <div className="w-full bg-white p-4 rounded-lg min-h-[420px] flex flex-col items-center justify-between gap-8 pt-32">
         <p>{content}</p>
         <div>
           <p className="text-center py-8">{name}</p>
