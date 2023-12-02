@@ -1,11 +1,21 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { FiActivity } from "react-icons/fi";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
+import Link from "next/link";
 
 type ProjectsProps = {};
 
 const Projects: React.FC<ProjectsProps> = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const handleHover = () => {
+    videoRef.current?.play();
+  };
+
+  const handleLeave = () => {
+    videoRef.current?.pause();
+  };
+
   return (
     <section className="w-full min-h-screen flex flex-col justify-center items-center gap-4 overflow-hidden mx-auto px-2.5 md:px-20 py-24 relative">
       <FramerMotionWrapper variant="fromBottom">
@@ -47,15 +57,25 @@ const Projects: React.FC<ProjectsProps> = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-col-reverse md:flex-row-reverse items-center justify-center px-4 py-12">
+      <div
+        onMouseEnter={handleHover}
+        onMouseLeave={handleLeave}
+        className="w-full flex flex-col-reverse md:flex-row-reverse items-center justify-center px-4 py-12"
+      >
         <div className="w-full">
-          <div className="bg-gray-700 w-full h-[420px]" />
+          
+          <video ref={videoRef} muted loop>
+            {/* <source src="/video-example.webm" type="video/webm" /> */}
+            <source src="/clipMovieDatabase.mp4" type="video/mp4" />
+            {"Sorry, your browser doesn't support videos."}
+          </video>
+
         </div>
         <div className="md:w-[90%] md:h-[420px] md:mr-[-120px] flex flex-col md:justify-between z-10">
           <div>
             <FramerMotionWrapper variant="fromLeft">
               <p className="pb-2">Featured Project</p>
-              <h3 className="text-5xl">Full Stack Dating App</h3>
+              <h3 className="text-5xl">Movie Database</h3>
             </FramerMotionWrapper>
           </div>
           <div className="bg-[#dbecfd] py-4 md:px-8 rounded-lg z-0">
@@ -67,15 +87,18 @@ const Projects: React.FC<ProjectsProps> = () => {
             <div className="w-full">
               <ul className="flex items-center justify-center gap-4 pt-4">
                 <li>Next Js</li>
-                <li>MongoDB</li>
+                <li>Firebase</li>
                 <li>Tailwind</li>
-                <li>Mongoose</li>
               </ul>
             </div>
           </div>
           <div className="flex justify-start items-center gap-4 pb-4">
-            <FiActivity size={40} />
-            <FiActivity size={40} />
+            <Link href="https://movie-database-4bf43.web.app/search">
+              <FiActivity size={40} />
+            </Link>
+            <Link href="https://movie-database-4bf43.web.app/search">
+              <FiActivity size={40} />
+            </Link>
           </div>
         </div>
       </div>
