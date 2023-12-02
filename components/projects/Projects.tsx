@@ -20,23 +20,23 @@ const Projects: React.FC<ProjectsProps> = () => {
         </div>
         <div className="md:w-[90%] md:h-[420px] md:ml-[-120px] flex flex-col md:justify-between">
           <div>
-            <FramerMotionWrapper variant="fromRight">
+            <FramerMotionWrapper variant="fromRight" className="py-2">
               <p className="md:text-end pb-2">Featured Project</p>
-              <h3 className="text-5xl md:text-end">Reddit Clone</h3>
+              <h3 className="text-5xl md:text-end">Full Stack Dating App</h3>
             </FramerMotionWrapper>
           </div>
           <div className="bg-[#dbecfd] py-4 md:px-8 rounded-lg z-10">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Quibusdam dolore quod alias accusamus numquam corrupti
-              voluptatibus nobis aspernatur nulla repellat. Quasi suscipit
-              voluptate voluptatibus neque placeat sequi modi esse odio!
+              A full stack dating application implementing Next Js server
+              actions. Features include: user registration, profile Management,
+              messaging, and filtering based on user preferences.
             </p>
             <div className="w-full">
               <ul className="flex items-center justify-center gap-4 pt-4">
-                <li>React</li>
-                <li>Firebase</li>
+                <li>Next Js</li>
+                <li>MongoDB</li>
                 <li>Tailwind</li>
+                <li>Mongoose</li>
               </ul>
             </div>
           </div>
@@ -51,25 +51,25 @@ const Projects: React.FC<ProjectsProps> = () => {
         <div className="w-full">
           <div className="bg-gray-700 w-full h-[420px]" />
         </div>
-        <div className="md:w-[90%] md:h-[420px] md:ml-[120px] flex flex-col md:justify-between z-10">
+        <div className="md:w-[90%] md:h-[420px] md:mr-[-120px] flex flex-col md:justify-between z-10">
           <div>
             <FramerMotionWrapper variant="fromLeft">
               <p className="pb-2">Featured Project</p>
-              <h3 className="text-5xl">Reddit Clone</h3>
+              <h3 className="text-5xl">Full Stack Dating App</h3>
             </FramerMotionWrapper>
           </div>
           <div className="bg-[#dbecfd] py-4 md:px-8 rounded-lg z-0">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Quibusdam dolore quod alias accusamus numquam corrupti
-              voluptatibus nobis aspernatur nulla repellat. Quasi suscipit
-              voluptate voluptatibus neque placeat sequi modi esse odio!
+              A full stack dating application implementing Next Js server
+              actions. Features include: user registration, profile Management,
+              messaging, and filtering based on user preferences.
             </p>
             <div className="w-full">
               <ul className="flex items-center justify-center gap-4 pt-4">
-                <li>React</li>
-                <li>Firebase</li>
+                <li>Next Js</li>
+                <li>MongoDB</li>
                 <li>Tailwind</li>
+                <li>Mongoose</li>
               </ul>
             </div>
           </div>
