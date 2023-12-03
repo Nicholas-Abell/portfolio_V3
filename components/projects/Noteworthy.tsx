@@ -28,6 +28,7 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
       className={`bg-gradient-to-r ${color} pt-4 pl-4 rounded-2xl relative`}
       onMouseEnter={() => setOverlay(true)}
       onMouseLeave={() => setOverlay(false)}
+      onClick={() => setOverlay(true)}
     >
       <div className="h-[320px] rounded-lg relative">
         <div
