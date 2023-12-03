@@ -8,12 +8,12 @@ type ServicesProps = {};
 
 const Services: React.FC<ServicesProps> = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col justify-center items-center gap-12 mx-auto px-2.5 md:px-20 py-24 text-stone-700">
+    <section className="w-full min-h-screen flex flex-col justify-center items-center gap-12 mx-auto px-2.5 xl:px-20 py-24 text-stone-700">
       <FramerMotionWrapper variant="fromBottom">
         <h2 className="text-center text-4xl md:text-6xl py-8">My Services</h2>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 lg:gap-8 lg:px-48 py-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 lg:gap-8 lg:px-32 py-4">
           <Card
             title="Web Development"
             icon={<FiChevronsUp size={25} />}
