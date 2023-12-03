@@ -7,6 +7,8 @@ import { FaGithub } from "react-icons/fa";
 
 type NoteworthyProps = {
   image: string;
+  title: string;
+  description: string;
   color: string;
   liveLink?: string;
   githubLink?: string;
@@ -14,9 +16,11 @@ type NoteworthyProps = {
 
 const Noteworthy: React.FC<NoteworthyProps> = ({
   image,
+  title,
   color,
   liveLink,
   githubLink,
+  description,
 }) => {
   const [overlay, setOverlay] = useState(false);
   return (
@@ -31,13 +35,8 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
             overlay ? "w-full px-4" : "w-0"
           } absolute h-full bg-gray-900/95 z-10 duration-200 ease-in-out rounded-lg flex flex-col justify-between items-center py-12 overflow-hidden text-center text-white`}
         >
-          <p className="text-3xl font-bold">Thistle & Thorns LLC</p>
-          <p className="text-left">
-            A Squarespace site I designed and built for a local tattoo shop that
-            approached me after struggling with their chosen CMS. With a bounce
-            rate under 40% the page has 2.7k views in {"its'"} first three
-            months. Currently on call as a webmaster
-          </p>
+          <p className="text-3xl font-bold">{title}</p>
+          <p className="text-left">{description}</p>
           <div className="flex items-center gap-4">
             {liveLink && (
               <Link
