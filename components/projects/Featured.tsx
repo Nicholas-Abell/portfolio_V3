@@ -1,38 +1,96 @@
-import React from "react";
+"use client";
+import Link from "next/link";
+import React, { useRef, useState } from "react";
 import { CgWebsite } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
+import FramerMotionWrapper from "../shared/FramerMotionWrapper";
+import { motion } from "framer-motion";
 
-type FeaturedProps = {};
+type FeaturedProps = {
+  title: string;
+  githubLink: string;
+  liveLink: string;
+  description: string;
+  skills: string[];
+  fromRight?: boolean;
+  video: string;
+};
 
-const Featured: React.FC<FeaturedProps> = () => {
+const Featured: React.FC<FeaturedProps> = ({
+  title,
+  description,
+  liveLink,
+  githubLink,
+  skills,
+  fromRight,
+  video,
+}) => {
+  const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const handleHover = () => {
+    videoRef.current?.play();
+    setShowVideo(true);
+  };
+
+  const handleLeave = () => {
+    videoRef.current?.pause();
+    setShowVideo(false);
+  };
   return (
-    <div className="w-full flex items-center justify-center px-4 py-2">
-      <div className="w-full">
-        <div className="bg-gray-700 w-full h-[420px]" />
+    <div
+      onMouseEnter={handleHover}
+      onMouseLeave={handleLeave}
+      className={`w-full flex flex-col-reverse ${
+        fromRight ? "md:flex-row" : "md:flex-row-reverse"
+      } items-center justify-center px-4 py-12`}
+    >
+      <div className="w-full relative">
+        <div
+          className={`absolute w-full h-full top-0 left-0 bg-gray-600/60 z-10 ease-in-out duration-200 ${
+            showVideo && "w-0"
+          }`}
+        />
+        <video ref={videoRef} muted loop>
+          {/* <source src="/video-example.webm" type="video/webm" /> */}
+          <source src={video} type="video/mp4" />
+          {"Sorry, your browser doesn't support videos."}
+        </video>
       </div>
-      <div className="w-[90%] h-[420px] ml-[-120px] flex flex-col justify-between">
+
+      <div
+        className={`md:w-[90%] md:h-[420px] ${
+          fromRight ? "md:ml-[-120px]" : "md:mr-[-120px]"
+        } flex flex-col md:justify-between z-10`}
+      >
         <div>
-          <p className="text-end pb-2">Featured Project</p>
-          <h3 className="text-5xl text-end">Reddit Clone</h3>
+          <FramerMotionWrapper variant={fromRight ? "fromRight" : "fromLeft"}>
+            <p className={`${fromRight && "text-end"} pb-2`}>
+              Featured Project
+            </p>
+            <h3 className={`${fromRight && "text-end"} text-5xl`}>{title}</h3>
+          </FramerMotionWrapper>
         </div>
-        <div className="bg-black py-4 px-8 rounded-lg">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            dolore quod alias accusamus numquam corrupti voluptatibus nobis
-            aspernatur nulla repellat. Quasi suscipit voluptate voluptatibus
-            neque placeat sequi modi esse odio!
-          </p>
+        <div className="bg-[#dbecfd] py-4 md:px-8 rounded-lg z-0">
+          <p>{description}</p>
           <div className="w-full">
             <ul className="flex items-center justify-center gap-4 pt-4">
-              <li>React</li>
-              <li>Firebase</li>
-              <li>Tailwind</li>
+              {skills.map((skill, key) => (
+                <li key={key}>{skill}</li>
+              ))}
             </ul>
           </div>
         </div>
-        <div className="flex justify-end items-center gap-4 pb-4">
-          <FaGithub size={40} />
-          <CgWebsite size={40} />
+        <div
+          className={`flex items-center gap-4 pb-4 ${
+            fromRight ? "justify-end" : "justify-start"
+          } `}
+        >
+          <Link href={liveLink}>
+            <CgWebsite size={40} />
+          </Link>
+          <Link href={githubLink}>
+            <FaGithub size={40} />
+          </Link>
         </div>
       </div>
     </div>
