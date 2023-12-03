@@ -39,11 +39,11 @@ const Featured: React.FC<FeaturedProps> = ({
     <div
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
-      className={`w-full flex flex-col-reverse bg-white rounded-lg border-black border-2 lg:border-none ${
-        fromRight ? "lg:flex-row" : "lg:flex-row-reverse"
+      className={`w-full flex flex-col-reverse  text- rounded-lg ${
+        fromRight ? "lg:flex-row bg-pink-50" : "lg:flex-row-reverse"
       } items-center justify-center px-4 py-4 lg:py-12`}
     >
-      <div className="w-full relative border-2 border-black">
+      <div className="hidden md:block w-full relative border-2 border-black">
         <div
           className={`absolute h-full top-0 left-0 bg-gray-600/60 z-10 ease-in-out duration-200 ${
             showVideo ? "w-0" : "w-full"
@@ -71,6 +71,18 @@ const Featured: React.FC<FeaturedProps> = ({
             </p>
             <h3 className={`${fromRight && "text-end"} text-5xl`}>{title}</h3>
           </FramerMotionWrapper>
+        </div>
+        <div className="md:hidden block w-full relative border-2 border-black">
+          <div
+            className={`absolute h-full top-0 left-0 bg-gray-600/60 z-10 ease-in-out duration-200 ${
+              showVideo ? "w-0" : "w-full"
+            }`}
+          />
+          <video ref={videoRef} muted loop>
+            {/* <source src="/video-example.webm" type="video/webm" /> */}
+            <source src={video} type="video/mp4" />
+            {"Sorry, your browser doesn't support videos."}
+          </video>
         </div>
         <div className="bg-[#dbecfd] py-4 px-4 lg:px-8 rounded-lg z-0">
           <p>{description}</p>
