@@ -46,8 +46,8 @@ const Featured: React.FC<FeaturedProps> = ({
     >
       <div className="w-full relative">
         <div
-          className={`absolute w-full h-full top-0 left-0 bg-gray-600/60 z-10 ease-in-out duration-200 ${
-            showVideo && "w-0"
+          className={`absolute h-full top-0 left-0 bg-gray-600/60 z-10 ease-in-out duration-200 ${
+            showVideo ? "w-0" : "w-full"
           }`}
         />
         <video ref={videoRef} muted loop>
@@ -63,7 +63,10 @@ const Featured: React.FC<FeaturedProps> = ({
         } flex flex-col md:justify-between z-10`}
       >
         <div>
-          <FramerMotionWrapper variant={fromRight ? "fromRight" : "fromLeft"}>
+          <FramerMotionWrapper
+            variant={fromRight ? "fromRight" : "fromLeft"}
+            className="py-2"
+          >
             <p className={`${fromRight && "text-end"} pb-2`}>
               Featured Project
             </p>
