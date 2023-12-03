@@ -13,16 +13,18 @@ const Services: React.FC<ServicesProps> = () => {
         <h2 className="text-center text-4xl md:text-6xl py-8">My Services</h2>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 md:gap-2 md:px-24 py-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 lg:gap-8 lg:px-48 py-4">
           <Card
             title="Web Development"
             icon={<FiChevronsUp size={25} />}
+            emphasis="I don't just design websites."
             description="I build high-performing, beautiful websites that are conversion-focused, brand-accurate, and user-friendly."
           />
           <Card
             title="Seo"
             icon={<FiChevronsUp size={25} />}
-            description="A greater audience. A high converting website won't be effective if no one visits it. Ranking on Google is essential to getting new clients in the door."
+            emphasis="A greater audience."
+            description="A high converting website won't be effective if no one visits it. Ranking on Google is essential to getting new clients in the door."
           />
           <Card
             title="Seo"
