@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import Card from "./Card";
-import profileImage from "../../public/profile.png";
-import mary from "../../public/mary-kleine.jpg";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
 
 type TestimonialsProps = {};
@@ -17,23 +15,25 @@ const Testimonials: React.FC<TestimonialsProps> = () => {
         </div>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
-        <div className="grid lg:grid-cols-3 py-4 gap-4 px-8 md:px-0">
+        <div className="grid lg:grid-cols-3 py-4 md:gap-4 px-8 md:px-0">
           <Card
             name="Mary"
             link="thistleandthornsllc.com"
-            image={mary}
-            content="lorem ipsadjf sdjfbkasjd flasdijfoiasesdfasdn fffffffffffffffffff fffffffaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaafffffnf lsajdfhn c a,sdfhoasild fjsfdh"
+            siteTitle="Thistle & Thorns LLC"
+            image="/mary-kleine.jpg"
+            content="Our site really took off! We didn't even know where to start, Nick just took over and a week later our site was live, and our shop was on google maps."
           />
           <Card
-            name="Mary"
-            link="thistleandthornsllc.com"
-            image={profileImage}
+            name="Steve"
+            link="https://smsconstructionandremodeling.com/"
+            siteTitle="SMS Construction & Remodeling"
+            image="/steve.jpg"
             content="lorem ipsadjf sdjfbkasjd flasdijfoiasenf lsajdfhn ca,sdfhoasild fjsfdh"
           />
           <Card
             name="Mary"
             link="thistleandthornsllc.com"
-            image={profileImage}
+            image="/profile.png"
             content="lorem ipsadjf sdjfbkasjd flasdijfoiasenf lsajdfhn ca,sdfhoasild fjsfdh"
           />
         </div>
