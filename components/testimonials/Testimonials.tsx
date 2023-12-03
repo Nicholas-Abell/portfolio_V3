@@ -21,20 +21,20 @@ const Testimonials: React.FC<TestimonialsProps> = () => {
             link="thistleandthornsllc.com"
             siteTitle="Thistle & Thorns LLC"
             image="/mary-kleine.jpg"
-            content="Our site really took off! We didn't even know where to start, Nick just took over and a week later our site was live, and our shop was on google maps."
+            content="Our site really took off! We didn't know where to start, Nick just took over and a week later our site was live, and our shop was on google maps."
+          />
+          <Card
+            name="Rick"
+            link="thistleandthornsllc.com"
+            image="/rick.jpg"
+            content="Nick helped us do things with google sheets I didn't know was possible. Recording information has never been easier"
           />
           <Card
             name="Steve"
             link="https://smsconstructionandremodeling.com/"
             siteTitle="SMS Construction & Remodeling"
             image="/steve.jpg"
-            content="lorem ipsadjf sdjfbkasjd flasdijfoiasenf lsajdfhn ca,sdfhoasild fjsfdh"
-          />
-          <Card
-            name="Mary"
-            link="thistleandthornsllc.com"
-            image="/profile.png"
-            content="lorem ipsadjf sdjfbkasjd flasdijfoiasenf lsajdfhn ca,sdfhoasild fjsfdh"
+            content="The site looks great! I needed a website for my new bussiness and Nick delivered."
           />
         </div>
       </FramerMotionWrapper>
