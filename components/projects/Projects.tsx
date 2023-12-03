@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
 import Featured from "./Featured";
 import Image from "next/image";
+import Noteworthy from "./Noteworthy";
 
 type ProjectsProps = {};
 
@@ -57,35 +58,41 @@ const Projects: React.FC<ProjectsProps> = () => {
 
         <FramerMotionWrapper variant="fromBottom">
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 px-4 lg:px-16  xl:px-24 overflow-hidden">
-            <div className=" bg-gradient-to-r from-red-400 pt-4 pl-4 rounded-2xl">
-              <div className="h-[320px] rounded-lg relative">
-                <div className="absolute top-0 left-0 z-10 w-0 hover:w-full ease-in duration-200 h-full bg-black/70" />
-                <Image
-                  src="/imageEverdell.png"
-                  alt="everdell"
-                  fill
-                  className="rounded-lg absolute left-2"
-                />
-              </div>
-            </div>
-            <div className=" bg-gradient-to-r from-blue-200 pt-4 pl-4 rounded-2xl">
-              <div className="h-[320px] rounded-lg relative">
-                <Image
-                  src="/imageThistle.png"
-                  alt="everdell"
-                  fill
-                  className="rounded-lg absolute left-2"
-                />
-              </div>
-            </div>
-            <div className="bg-gray-400 h-[320px] rounded-lg" />
-            <div className="bg-gray-400 h-[320px] rounded-lg" />
-            <div className="bg-gray-400 h-[320px] rounded-lg" />
-            <div className="bg-gray-400 h-[320px] rounded-lg" />
-            <div className="bg-gray-400 h-[320px] rounded-lg" />
-            <div className="bg-gray-400 h-[320px] rounded-lg" />
-            <div className="bg-gray-400 h-[320px] rounded-lg" />
-            <div className="bg-gray-400 h-[320px] rounded-lg" />
+            <Noteworthy
+              image="/imageThistle.png"
+              title="Thistle & Thorns LLC"
+              description="A Squarespace site I designed and built for a local tattoo shop that
+              approached me after struggling with their chosen CMS. With a bounce
+              rate under 40% the page has 2.7k views in its first three
+              months. Currently on call as a webmaster"
+              color="from-blue-200"
+              liveLink="https://www.thistleandthornsllc.com/"
+            />
+            <Noteworthy
+              image="/imageSMS.png"
+              title="SMS Construction and Remodeling"
+              description="A Website I built to help a small town handyman reach more clients. Currently hosted
+              on Hostinger. I Set up Google analytics for client and used SEO best practices."
+              color="from-red-400"
+              liveLink="https://smsconstructionandremodeling.com/"
+              githubLink="https://smsconstructionandremodeling.com/"
+            />
+            <Noteworthy
+              image="/imageEverdell.png"
+              title="Everdell Calculator"
+              description="My first app. A calculator for the ppopular board game Everdell. Built in the Unity game engine in C#. This is still used by me and my family today"
+              color="from-green-400"
+              liveLink="https://darkforceyoda.itch.io/everdell-companion-app"
+              githubLink="https://github.com/Nicholas-Abell/Everdell-Point-Tracker"
+            />
+            <Noteworthy
+              image="/imageWordle.jpeg"
+              title="WordleClone"
+              description="Wordle Clone is a digital rendition of the beloved word puzzle game Wordle. Challenge yourself to uncover a secret five-letter word within six attempts, with helpful feedback after each guess."
+              color="from-purple-400"
+              liveLink="https://nicholas-abell.github.io/wordle_clone/"
+              githubLink="https://github.com/Nicholas-Abell/wordle_clone"
+            />
           </div>
         </FramerMotionWrapper>
       </div>
