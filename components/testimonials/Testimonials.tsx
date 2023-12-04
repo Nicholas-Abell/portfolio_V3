@@ -27,7 +27,7 @@ const Testimonials: React.FC<TestimonialsProps> = () => {
             name="Rick"
             link="thistleandthornsllc.com"
             image="/rick.jpg"
-            content="Nick helped us do things with google sheets I didn't know was possible. Recording information has never been easier"
+            content="Nick helped us do things with google sheets I didn't know was possible. Recording information has never been easier."
           />
           <Card
             name="Steve"
