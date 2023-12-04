@@ -15,7 +15,7 @@ const Testimonials: React.FC<TestimonialsProps> = () => {
         </div>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
-        <div className="grid lg:grid-cols-3 py-4 md:gap-4 px-8 md:px-0">
+        <div className="grid lg:grid-cols-3 py-4 md:gap-4 px-8 md:px-0 grid-rows-1">
           <Card
             name="Mary"
             link="thistleandthornsllc.com"

@@ -21,14 +21,14 @@ const Contact = () => {
         </div>
       </FramerMotionWrapper>
       <div className="grid lg:grid-cols-5 gap-8">
-        <div className="col-span-3 lg:col-span-2 shadow-gray-400 rounded-xl p-4 text-center">
+        <div className="col-span-3 lg:col-span-2 shadow-gray-400 rounded-xl p-4 text-center border shadow-md">
           <div className="p-8 lg:p-4 h-full">
             <div className="w-full h-auto flex justify-center items-center">
               <Image
                 src="/profile.png"
                 alt="profile"
-                height={600}
-                width={600}
+                height={200}
+                width={200}
                 className="rounded-xl"
               />
             </div>
@@ -43,14 +43,14 @@ const Contact = () => {
         </div>
         <div
           id="email"
-          className="col-span-3 w-full h-auto shadow-gray-400 rounded-xl lg:p-4"
+          className="col-span-3 w-full shadow-gray-400 rounded-xl lg:p-4 border shadow-md"
         >
           <div className="p-4">
             <form
               action="https://formsubmit.co/nicholaswabell@gmail.com"
               method="POST"
             >
-              <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+              <div className="grid md:grid-cols-2 gap-2 w-full py-2">
                 <div className="flex flex-col">
                   <label className="uppercase text-sm py-2">Name</label>
                   <input
@@ -87,7 +87,7 @@ const Contact = () => {
                 <label className="uppercase text-sm py-2">Message</label>
                 <textarea
                   name="text-area"
-                  rows={10}
+                  rows={6}
                   className="border-2 rounded-lg p-3 flex border-gray-300"
                 />
               </div>
@@ -101,7 +101,7 @@ const Contact = () => {
                 name="_autoresponse"
                 value="Thank you for contacting me. I will get in touch soon."
               />
-              <button className="w-full my-4 p-4 hover:duration-200 ease-in text-gray-800">
+              <button className="w-full my-4 p-4 hover:duration-200 ease-in text-gray-800 bg-blue-200 hover:bg-blue-100 border rounded-lg duration-200">
                 Send Message
               </button>
             </form>
