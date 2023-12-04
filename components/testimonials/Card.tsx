@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({
   siteTitle,
 }) => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center drop-shadow-lg ">
       <Image
         src={image}
         width={160}

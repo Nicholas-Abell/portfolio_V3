@@ -30,7 +30,7 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
       onMouseLeave={() => setOverlay(false)}
       onClick={() => setOverlay(true)}
     >
-      <div className="h-[320px] rounded-lg relative">
+      <div className="h-[320px] rounded-lg relative shadow-lg shadow-gray-400">
         <div
           className={`${
             overlay ? "w-full px-4" : "w-0"
