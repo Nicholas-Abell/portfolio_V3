@@ -1,8 +1,11 @@
 "use client";
 import React from "react";
 import { FiChevronsUp } from "react-icons/fi";
+import { FaFigma } from "react-icons/fa";
 import Card from "./Card";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
+import { SiGooglesheets } from "react-icons/si";
+import { MdOutlineWifiTethering } from "react-icons/md";
 
 type ServicesProps = {};
 
@@ -17,29 +20,30 @@ const Services: React.FC<ServicesProps> = () => {
           <Card
             title="Web Development"
             icon={<FiChevronsUp size={25} />}
-            emphasis="I don't just design websites."
-            description="I build high-performing, beautiful websites that are conversion-focused, brand-accurate, and user-friendly."
+            emphasis="I don't just build websites."
+            description="I build high-performing mobile responsive websites that are not only beautiful, but user friendly."
+            bgColor="bg-blue-200"
           />
           <Card
             title="Seo"
-            icon={<FiChevronsUp size={25} />}
-            emphasis="A greater audience."
-            description="A high converting website won't be effective if no one visits it. Ranking on Google is essential to getting new clients in the door."
+            icon={<MdOutlineWifiTethering size={25} />}
+            emphasis="Reach a wider audience."
+            description="Using proven seo methods I can help customers find your website on Google and other popular search engines."
+            bgColor="bg-red-200"
           />
           <Card
-            title="Seo"
-            icon={<FiChevronsUp size={25} description="asdjf;laskdjfaksf" />}
-            description="A greater audience. A high converting website won't be effective if no one visits it. Ranking on Google is essential to getting new clients in the door."
+            title="Figma Conversion"
+            icon={<FaFigma size={25} />}
+            emphasis="I will convert your designs"
+            description="into a fully functional and mobiles responsive website using React and Tailwind Css."
+            bgColor="bg-yellow-200"
           />
           <Card
-            title="Seo"
-            icon={
-              <FiChevronsUp
-                size={25}
-                description="A greater audience. A high converting website won't be effective if no one visits it. Ranking on Google is essential to getting new clients in the door."
-              />
-            }
-            description="A greater audience. A high converting website won't be effective if no one visits it. Ranking on Google is essential to getting new clients in the door."
+            title="Google Sheets"
+            icon={<SiGooglesheets size={25} />}
+            emphasis="Have Google Sheets work for you!"
+            description="Let me automate your workflow. Using Apps Script and inline functions I can make your work easier than ever."
+            bgColor="bg-green-200"
           />
         </div>
       </FramerMotionWrapper>
