@@ -1,5 +1,6 @@
 import React from "react";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
+import { backEnd, frontEnd, otherSkills } from "@/constants/skills";
 
 type SkillsProps = {};
 
@@ -13,47 +14,67 @@ const Skills: React.FC<SkillsProps> = () => {
         </div>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="flex flex-col gap-2">
-            <p className="font-bold text-center text-4xl">Front-End</p>
-            <div className="grid grid-cols-3 gap-4 bg-white rounded-lg p-4">
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />{" "}
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
+            <p className="font-bold text-center text-4xl bg-gray-300 rounded-lg">
+              Front End
+            </p>
+            <div className="grid grid-cols-3 gap-4 bg-gray-300 rounded-lg p-4">
+              {frontEnd.map((skill: any, key) => (
+                <div
+                  key={key}
+                  className="text-center justify-center flex flex-col gap-2"
+                >
+                  <div className="bg-white h-[120px] rounded-lg flex justify-center items-center shadow-md">
+                    {skill.icon}
+                  </div>
+                  <div className="w-full bg-white rounded-lg p-2 text-center font-bold shadow-md">
+                    <p>{skill.name}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
           <div className="flex flex-col gap-2">
-            <p className="font-bold text-center text-4xl">Front-End</p>
-            <div className="grid grid-cols-3 gap-4 bg-white rounded-lg p-4">
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />{" "}
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
+            <p className="font-bold text-center text-4xl bg-gray-300 rounded-lg">
+              Back End
+            </p>
+            <div className="grid grid-cols-3 gap-4 bg-gray-300 rounded-lg p-4">
+              {backEnd.map((skill: any, key) => (
+                <div
+                  key={key}
+                  className="text-center justify-center flex flex-col gap-2"
+                >
+                  <div className="bg-white h-[120px] rounded-lg flex justify-center items-center shadow-md">
+                    {skill.icon}
+                  </div>
+                  <div className="w-full bg-white rounded-lg p-2 text-center font-bold shadow-md">
+                    <p>{skill.name}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
           <div className="flex flex-col gap-2">
-            <p className="font-bold text-center text-4xl">Front-End</p>
-            <div className="grid grid-cols-3 gap-4 bg-white rounded-lg p-4">
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />{" "}
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
-              <div className="bg-gray-800 h-[120px] rounded-lg" />
+            <p className="font-bold text-center text-4xl bg-gray-300 rounded-lg">
+              Other
+            </p>
+            <div className="grid grid-cols-3 gap-4 bg-gray-300 rounded-lg p-4">
+              {otherSkills.map((skill: any, key) => (
+                <div
+                  key={key}
+                  className="text-center justify-center flex flex-col gap-2"
+                >
+                  <div className="bg-white h-[120px] rounded-lg flex justify-center items-center shadow-md">
+                    {skill.icon}
+                  </div>
+                  <div className="w-full bg-white rounded-lg p-2 text-center font-bold shadow-md">
+                    <p>{skill.name}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
