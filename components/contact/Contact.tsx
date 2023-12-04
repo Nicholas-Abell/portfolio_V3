@@ -3,6 +3,8 @@ import React from "react";
 import { HiChevronDoubleUp } from "react-icons/hi";
 import Image from "next/image";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
+import Link from "next/link";
 
 const Contact = () => {
   const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
@@ -13,7 +15,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center gap-12 mx-auto px-2.5 xl:px-20 py-24">
+    <div className="w-full min-h-screen flex flex-col justify-center items-center gap-12 px-2.5 xl:px-20 py-24">
       <FramerMotionWrapper variant="fromBottom">
         <div className="pb-8 text-center ">
           <p className="text-gray-400">Get In Touch</p>
@@ -27,17 +29,35 @@ const Contact = () => {
               <Image
                 src="/profile.png"
                 alt="profile"
-                height={200}
-                width={200}
+                height={280}
+                width={280}
                 className="rounded-xl"
               />
             </div>
             <div className="py-8">
               <h2 className="py-4 dark:text-red-600">Nick Abell</h2>
-              <p>Front End Developer</p>
+              <p>Software Developer</p>
             </div>
-            <div>
-              <p className="uppercase pt-12 text-center">Connect With Me</p>
+            <p className="uppercase pt-24 text-center">Connect With Me</p>
+            <div className="flex items-center justify-center w-full gap-4 py-2 text-gray-800">
+              <Link
+                href="https://github.com/Nicholas-Abell"
+                className="rounded-full p-2 shadow-lg shadow-gray-400 ease-in-out duration-200 hover:text-purple-700 shadow:text-purple-700"
+              >
+                <SiGithub size={30} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/nicholas-abell-348807192/"
+                className="rounded-full p-2 shadow-lg shadow-gray-400 ease-in-out duration-200 hover:text-blue-400 hover:shadow-purple-200"
+              >
+                <SiLinkedin size={30} />
+              </Link>
+              <Link
+                href="mailto:nicholaswabell@gmail.com"
+                className="rounded-full p-2 shadow-lg shadow-gray-400 ease-in-out duration-200 hover:text-red-400 hover:shadow-purple-200"
+              >
+                <SiGmail size={30} />
+              </Link>
             </div>
           </div>
         </div>
@@ -50,7 +70,7 @@ const Contact = () => {
               action="https://formsubmit.co/nicholaswabell@gmail.com"
               method="POST"
             >
-              <div className="grid md:grid-cols-2 gap-2 w-full py-2">
+              <div className="grid grid-cols-2 gap-2 w-full py-2">
                 <div className="flex flex-col">
                   <label className="uppercase text-sm py-2">Name</label>
                   <input
@@ -109,12 +129,12 @@ const Contact = () => {
         </div>
       </div>
       <div className="flex justify-center py-12">
-        <div
+        <button
           onClick={scrollToTop}
-          className="rounded-full cursor-pointer p-3 border border-black"
+          className="rounded-full cursor-pointer p-3 shadow-lg shadow-gray-300 hover:shadow-sm hover:shadow-purple-200 duration-200 ease-in-out"
         >
           <HiChevronDoubleUp size={30} className="m-auto" />
-        </div>
+        </button>
       </div>
     </div>
   );
