@@ -53,30 +53,35 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
           <FramerMotionWrapper variant="fromTop" duration={0.8}>
             <ul className="hidden md:flex text-gray-900 font-bold">
               <Link
+                href="/#projects"
+                scroll={true}
+                className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
+              >
+                Projects
+              </Link>
+              <Link
                 href="/#skills"
                 scroll={true}
                 className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
               >
-                About Me
-              </Link>
-              <li className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer">
                 Skills
-              </li>
-              <li className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer">
-                Projects
-              </li>
-              <li className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer">
+              </Link>
+              <Link
+                href="/#contact"
+                scroll={true}
+                className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
+              >
                 Contact
-              </li>
+              </Link>
             </ul>
           </FramerMotionWrapper>
         </div>
-        <div onClick={handleMobileNav} className="md:hidden">
+        <button onClick={handleMobileNav} className="md:hidden">
           <AiOutlineMenu
             size={25}
             className="cursor-pointer ease-in duration-200"
           />
-        </div>
+        </button>
       </div>
 
       <div
@@ -95,27 +100,42 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         >
           <div className="w-full flex justify-between items-center p-4 border-b-2 border-gray-400">
             <h1 className="dark:text-gray-100 text-black">Nick A</h1>
-            <div
+            <button
               onClick={handleMobileNav}
               className="neon p-3 rounded-full cursor-pointer"
             >
               <AiOutlineClose />
-            </div>
+            </button>
           </div>
           <div>
             <ul className="flex flex-col w-full gap-12 mt-8">
-              <Link href="/#about">
-                <li className="ml-10 uppercase cursor-pointer">About Me</li>
-              </Link>
-              <Link href="/#skills">
-                <li className="ml-10 uppercase cursor-pointer">Skills</li>
-              </Link>
-              <Link href="/#projects">
-                <li className="ml-10 uppercase cursor-pointer">Projects</li>
-              </Link>
-              <Link href="/#contact">
-                <li className="ml-10 uppercase cursor-pointer">Contact</li>
-              </Link>
+              <li className="ml-10 uppercase cursor-pointer">
+                <Link
+                  href="/#projects"
+                  scroll={true}
+                  onClick={() => setMobileNav(false)}
+                >
+                  Projects
+                </Link>
+              </li>
+              <li className="ml-10 uppercase cursor-pointer">
+                <Link
+                  href="/#skills"
+                  scroll={true}
+                  onClick={() => setMobileNav(false)}
+                >
+                  Skills
+                </Link>
+              </li>
+              <li className="ml-10 uppercase cursor-pointer">
+                <Link
+                  href="/#contact"
+                  scroll={true}
+                  onClick={() => setMobileNav(false)}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="pt-40">
