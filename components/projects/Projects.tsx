@@ -9,7 +9,10 @@ type ProjectsProps = {};
 
 const Projects: React.FC<ProjectsProps> = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col justify-center items-center gap-8 overflow-hidden mx-auto py-24 relative">
+    <section
+      id="projects"
+      className="w-full min-h-screen flex flex-col justify-center items-center gap-8 overflow-hidden mx-auto py-24 relative"
+    >
       <FramerMotionWrapper variant="fromBottom">
         <h2 className="text-center text-4xl md:text-6xl py-8">
           Personal Projects

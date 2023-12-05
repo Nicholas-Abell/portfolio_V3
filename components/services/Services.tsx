@@ -11,7 +11,10 @@ type ServicesProps = {};
 
 const Services: React.FC<ServicesProps> = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col justify-center items-center gap-12 mx-auto px-2.5 xl:px-20 py-24 text-stone-700">
+    <section
+      id="services"
+      className="w-full min-h-screen flex flex-col justify-center items-center gap-12 mx-auto px-2.5 xl:px-20 py-24 text-stone-700"
+    >
       <FramerMotionWrapper variant="fromBottom">
         <h2 className="text-center text-4xl md:text-6xl py-8">My Services</h2>
       </FramerMotionWrapper>

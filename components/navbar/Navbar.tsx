@@ -24,23 +24,12 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     window.addEventListener("scroll", handleShadow);
   }, []);
 
-  const handleNavClick = (id: any) => {
-    if (window.location.pathname !== "/") {
-      window.location.href = "/";
-    } else if (id) {
-      const skillsElement = document.getElementById(id);
-      const offset = 90;
-      const yCoordinate =
-        skillsElement!.getBoundingClientRect().top +
-        window.pageYOffset -
-        offset;
-      window.scrollTo({ top: yCoordinate, behavior: "smooth" });
-    } else {
-      window.scrollTo(0, 0);
-    }
+  const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
 
-    setMobileNav(false);
-  };
+  function scrollToTop() {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   return (
     <div
@@ -53,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <div className="flex items-center justify-center gap-4">
           <button
-            onClick={() => handleNavClick(0)}
+            onClick={() => scrollToTop()}
             className="w-[100px] h-[45px] flex justify-center items-center gap-2 p-2 shadow-lg hover:shadow-xl rounded-xl uppercase"
           >
             <FaHome size={25} className="w-full h-full" />
@@ -63,28 +52,20 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         <div>
           <FramerMotionWrapper variant="fromTop" duration={0.8}>
             <ul className="hidden md:flex text-gray-900 font-bold">
-              <li
-                onClick={() => handleNavClick("about")}
+              <Link
+                href="/#skills"
+                scroll={true}
                 className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
               >
                 About Me
-              </li>
-              <li
-                onClick={() => handleNavClick("skills")}
-                className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
-              >
+              </Link>
+              <li className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer">
                 Skills
               </li>
-              <li
-                onClick={() => handleNavClick("projects")}
-                className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
-              >
+              <li className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer">
                 Projects
               </li>
-              <li
-                onClick={() => handleNavClick("contact")}
-                className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
-              >
+              <li className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer">
                 Contact
               </li>
             </ul>
@@ -123,19 +104,16 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
           </div>
           <div>
             <ul className="flex flex-col w-full gap-12 mt-8">
-              <Link onClick={() => handleNavClick("about")} href="/#about">
+              <Link href="/#about">
                 <li className="ml-10 uppercase cursor-pointer">About Me</li>
               </Link>
-              <Link onClick={() => handleNavClick("skills")} href="/#skills">
+              <Link href="/#skills">
                 <li className="ml-10 uppercase cursor-pointer">Skills</li>
               </Link>
-              <Link
-                onClick={() => handleNavClick("projects")}
-                href="/#projects"
-              >
+              <Link href="/#projects">
                 <li className="ml-10 uppercase cursor-pointer">Projects</li>
               </Link>
-              <Link onClick={() => handleNavClick("contact")} href="/#contact">
+              <Link href="/#contact">
                 <li className="ml-10 uppercase cursor-pointer">Contact</li>
               </Link>
             </ul>
