@@ -17,7 +17,7 @@ const Skills: React.FC<SkillsProps> = () => {
         </div>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 auto-rows-fr text-xs">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-12 auto-rows-fr text-xs">
           <div className="flex flex-col gap-2">
             <p className="font-bold text-center text-4xl bg-gray-300 rounded-lg">
               Front End
