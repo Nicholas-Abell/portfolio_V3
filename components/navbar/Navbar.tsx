@@ -85,62 +85,52 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
       </div>
 
       <div
-        className={
-          mobileNav
-            ? "md:hidden fixed left-0 top-0 bg-black/70 h-screen w-full"
-            : "hidden"
-        }
+        className={`${
+          mobileNav ? "w-[75%] sm:w-[60%]" : "w-0"
+        } fixed top-0 z-50 h-screen bg-white ease-in-out duration-500 overflow-hidden`}
       >
-        <div
-          className={
-            mobileNav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md-[45%] h-screen bg-white p-10"
-              : "fixed left-[-100%] top-0 w-[75%] sm:w-[60%] md-[45%] h-screen bg-white p-10 ease-in duration-500"
-          }
-        >
-          <div className="w-full flex justify-between items-center p-4 border-b-2 border-gray-400">
-            <h1 className="dark:text-gray-100 text-black">Nick A</h1>
-            <button
-              onClick={handleMobileNav}
-              className="neon p-3 rounded-full cursor-pointer"
-            >
-              <AiOutlineClose />
-            </button>
-          </div>
-          <div>
-            <ul className="flex flex-col w-full gap-12 mt-8">
-              <li className="ml-10 uppercase cursor-pointer">
-                <Link
-                  href="/#projects"
-                  scroll={true}
-                  onClick={() => setMobileNav(false)}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li className="ml-10 uppercase cursor-pointer">
-                <Link
-                  href="/#skills"
-                  scroll={true}
-                  onClick={() => setMobileNav(false)}
-                >
-                  Skills
-                </Link>
-              </li>
-              <li className="ml-10 uppercase cursor-pointer">
-                <Link
-                  href="/#contact"
-                  scroll={true}
-                  onClick={() => setMobileNav(false)}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="pt-40">
-            <p>{"Let's Connect"}</p>
-          </div>
+        <div className="w-full flex justify-between items-center p-4 border-b-2 border-gray-400">
+          <h1 className="dark:text-gray-100 text-black">Nick A</h1>
+          <button
+            onClick={handleMobileNav}
+            className="p-3 rounded-full cursor-pointer"
+          >
+            <AiOutlineClose />
+          </button>
+        </div>
+        <div>
+          <ul className="flex flex-col w-full gap-12 mt-8">
+            <li className="ml-10 uppercase cursor-pointer">
+              <Link
+                href="/#projects"
+                scroll={true}
+                onClick={() => setMobileNav(false)}
+              >
+                Projects
+              </Link>
+            </li>
+            <li className="ml-10 uppercase cursor-pointer">
+              <Link
+                href="/#skills"
+                scroll={true}
+                onClick={() => setMobileNav(false)}
+              >
+                Skills
+              </Link>
+            </li>
+            <li className="ml-10 uppercase cursor-pointer">
+              <Link
+                href="/#contact"
+                scroll={true}
+                onClick={() => setMobileNav(false)}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="pt-40">
+          <p>{"Let's Connect"}</p>
         </div>
       </div>
     </div>
