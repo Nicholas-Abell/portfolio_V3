@@ -43,24 +43,24 @@ const Contact = () => {
                 <p>Software Developer</p>
               </div>
               <p className="uppercase pt-24 text-center">Connect With Me</p>
-              <div className="flex items-center justify-center w-full gap-4 py-2 text-gray-800">
+              <div className="flex items-center justify-center w-full gap-4 py-2 text-gray-400">
                 <Link
                   href="https://github.com/Nicholas-Abell"
-                  className="rounded-full p-2 shadow-lg shadow-gray-400 ease-in-out duration-200 hover:text-purple-700 shadow:text-purple-700"
-                >
-                  <SiGithub size={30} />
+                  className="hover:text-black rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
+                  >
+                  <SiGithub size={25} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/nicholas-abell-348807192/"
-                  className="rounded-full p-2 shadow-lg shadow-gray-400 ease-in-out duration-200 hover:text-blue-400 hover:shadow-purple-200"
-                >
-                  <SiLinkedin size={30} />
+                  className="hover:text-black rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
+                  >
+                  <SiLinkedin size={25} />
                 </Link>
                 <Link
                   href="mailto:nicholaswabell@gmail.com"
-                  className="rounded-full p-2 shadow-lg shadow-gray-400 ease-in-out duration-200 hover:text-red-400 hover:shadow-purple-200"
-                >
-                  <SiGmail size={30} />
+                  className="hover:text-black rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
+                  >
+                  <SiGmail size={25} />
                 </Link>
               </div>
             </div>
