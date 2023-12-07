@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
         src={image}
         width={160}
         height={160}
-        className=" rounded-full translate-y-1/2 border-8 border-[#f5eef0] border-solid"
+        className=" rounded-full translate-y-1/2 border-8 border-light border-solid"
         alt="a"
       />
       <div className="w-full bg-light p-4 rounded-lg flex flex-col items-center justify-between gap-8 pt-24 h-full">
