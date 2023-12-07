@@ -22,9 +22,7 @@ const Card: React.FC<CardProps> = ({
         <p className="font-bold text-xl md:text-3xl">{title}</p>
       </div>
       <p className="text-xl">
-        <em className=" font-semibold not-italic text-darkAccent">
-          {emphasis}
-        </em>{" "}
+        <em className="font-semibold not-italic text-darkAccent">{emphasis} </em>
         {description}
       </p>
     </div>

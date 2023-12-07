@@ -16,7 +16,10 @@ const Services: React.FC<ServicesProps> = () => {
       className="w-full min-h-screen flex flex-col justify-center items-center gap-12 mx-auto px-2.5 xl:px-20 py-24 text-stone-700"
     >
       <FramerMotionWrapper variant="fromBottom">
-        <h2 className="text-center text-4xl md:text-6xl py-8">My Services</h2>
+        <p className="text-gray-400">some of</p>
+        <h2 className="text-4xl md:text-6xl font-bold text-darker">
+          My Services
+        </h2>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 lg:gap-8 gap-4 lg:px-32 py-4">

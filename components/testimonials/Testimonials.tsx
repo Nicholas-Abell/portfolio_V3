@@ -11,7 +11,7 @@ const Testimonials: React.FC<TestimonialsProps> = () => {
       <FramerMotionWrapper variant="fromBottom">
         <div className="pb-8 text-center ">
           <p className="text-gray-400">REVIEWS</p>
-          <h2 className="text-4xl md:text-6xl text-darkAccent">Testimonials</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-light">Testimonials</h2>
         </div>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">

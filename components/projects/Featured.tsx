@@ -51,7 +51,7 @@ const Featured: React.FC<FeaturedProps> = ({
         className="py-2 lg:hidden"
       >
         <p className={`${fromRight && "text-end"} pb-2`}>Featured Project</p>
-        <h3 className={`${fromRight && "text-end"} text-5xl`}>{title}</h3>
+        <h3 className={`${fromRight && "text-end"} text-5xl font-semibold`}>{title}</h3>
       </FramerMotionWrapper>
 
       <div className="w-full relative border-2 border-black">

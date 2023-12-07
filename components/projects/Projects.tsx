@@ -12,10 +12,14 @@ const Projects: React.FC<ProjectsProps> = () => {
       id="projects"
       className="w-full min-h-screen flex flex-col justify-center items-center gap-8 overflow-hidden mx-auto py-24 relative"
     >
-      <FramerMotionWrapper variant="fromBottom">
-        <h2 className="text-center text-4xl md:text-6xl py-8">
-          Personal Projects
-        </h2>
+      <FramerMotionWrapper
+        variant="fromBottom"
+        className="mx-auto px-2.5 xl:px-20 py-8"
+      >
+        <div>
+          <p>What I can Do</p>
+          <h2 className="text-4xl md:text-6xl font-bold text-darker">PROJECTS</h2>
+        </div>
       </FramerMotionWrapper>
 
       <Featured

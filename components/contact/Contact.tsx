@@ -39,7 +39,7 @@ const Contact = () => {
                 />
               </div>
               <div className="py-8">
-                <h2 className="py-4 dark:text-red-600">Nick Abell</h2>
+                <h2 className="py-4 text-main">Nick Abell</h2>
                 <p>Software Developer</p>
               </div>
               <p className="uppercase pt-24 text-center">Connect With Me</p>
