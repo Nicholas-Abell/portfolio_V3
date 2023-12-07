@@ -28,9 +28,9 @@ const Card: React.FC<CardProps> = ({
         className=" rounded-full translate-y-1/2 border-8 border-[#f5eef0] border-solid"
         alt="a"
       />
-      <div className="w-full bg-white p-4 rounded-lg flex flex-col items-center justify-between gap-8 pt-24 h-full">
+      <div className="w-full bg-light p-4 rounded-lg flex flex-col items-center justify-between gap-8 pt-24 h-full">
         <div className="flex flex-col items-center gap-2">
-          <ImQuotesLeft size={25} className="text-gray-300" />
+          <ImQuotesLeft size={25} className="text-accent" />
           <p className="text-gray-600 text-xl px-12">{content}</p>
         </div>
         <div>

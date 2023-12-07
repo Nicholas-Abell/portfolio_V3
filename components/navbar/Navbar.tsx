@@ -35,8 +35,8 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     <div
       className={
         shadow
-          ? `w-full fixed h-20 shadow-xl z-[100] bg-[#ECF0F3] hover:duration-200 ease-in no-print`
-          : `w-full fixed h-20 z-[100] bg-[#f5eef0] no-print`
+          ? `w-full fixed h-20 shadow-xl z-[100] bg-accent hover:duration-200 ease-in no-print`
+          : `w-full fixed h-20 z-[100] bg-light no-print`
       }
     >
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">

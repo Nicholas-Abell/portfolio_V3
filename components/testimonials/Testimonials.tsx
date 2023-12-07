@@ -7,11 +7,11 @@ type TestimonialsProps = {};
 
 const Testimonials: React.FC<TestimonialsProps> = () => {
   return (
-    <section className="w-full min-h-screen bg-[#f5eef0] mx-auto px-2.5 md:px-20 py-24">
+    <section className="w-full min-h-screen bg-dark mx-auto px-2.5 md:px-20 py-24">
       <FramerMotionWrapper variant="fromBottom">
         <div className="pb-8 text-center ">
           <p className="text-gray-400">REVIEWS</p>
-          <h2 className="text-4xl md:text-6xl">Testimonials</h2>
+          <h2 className="text-4xl md:text-6xl text-darkAccent">Testimonials</h2>
         </div>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
