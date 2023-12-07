@@ -70,41 +70,8 @@ const Hero: React.FC<HeroProps> = () => {
           </div>
         </FramerMotionWrapper>
       </div>
-      <div className="row-span-1 items-center justify-center relative">
-        <div className="grid grid-cols-3 grid-rows-1 justify-center h-full">
-          <div className="w-full flex justify-center items-center border-r border-gray-400 relative test">
-            <div className=" rounded-full bg-white border-4 border-white p-8"></div>
-            <p className=" absolute bottom-0 left-[45%] test">Mobile</p>
-          </div>
-          <div className="w-full flex justify-center items-center border-r border-gray-400">
-            <div className=" rounded-full bg-white border-4 border-white p-8"></div>
-          </div>
-          <div className="w-full flex justify-center items-center">
-            <div className=" rounded-full bg-white border-4 border-white p-8"></div>
-          </div>
-        </div>
-        <div className="absolute z-[-10] w-full h-[50%] top-0 left-0 bg-[#f5eef0]" />
-      </div>
-      <div className="row-span-1 relative">
-        <div className="grid grid-cols-3 grid-rows-1 justify-center h-full">
-          <div className="w-full flex justify-center items-center border-r border-gray-400">
-            <div className=" rounded-full bg-white border-4 border-[#f5eef0] p-4">
-              <SiExpress size={20} />
-            </div>
-          </div>
-          <div className="w-full flex justify-center items-center border-r border-gray-400">
-            <div className=" rounded-full bg-white border-4 border-[#f5eef0] p-4">
-              <SiReact size={20} className="text-blue-600" />
-            </div>
-          </div>
-          <div className="w-full flex justify-center items-center">
-            <div className=" rounded-full bg-white border-4 border-[#f5eef0] p-4">
-              <SiNodedotjs size={20} />
-            </div>
-          </div>
-        </div>
-        <div className="absolute z-[-10] w-full h-[50%] bottom-0 left-0 bg-[#f5eef0]" />
-      </div>
+
+      <div className="row-span-2 test relative"></div>
     </section>
   );
 };

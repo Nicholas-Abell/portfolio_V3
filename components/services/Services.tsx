@@ -19,7 +19,7 @@ const Services: React.FC<ServicesProps> = () => {
         <h2 className="text-center text-4xl md:text-6xl py-8">My Services</h2>
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 lg:gap-8 lg:px-32 py-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 lg:gap-8 gap-4 lg:px-32 py-4">
           <Card
             title="Web Development"
             icon={<FiChevronsUp size={25} />}

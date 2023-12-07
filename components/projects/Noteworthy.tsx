@@ -34,7 +34,7 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
         <div
           className={`${
             overlay ? "w-full px-4" : "w-0"
-          } absolute h-full bg-gray-900/95 z-10 duration-200 ease-in-out rounded-lg flex flex-col justify-between items-center py-12 overflow-hidden text-center text-white`}
+          } absolute h-full bg-darker z-10 duration-200 ease-in-out rounded-lg flex flex-col justify-between items-center py-12 overflow-hidden text-center text-white`}
         >
           <p className="text-3xl font-bold">{title}</p>
           <p className="text-left">{description}</p>

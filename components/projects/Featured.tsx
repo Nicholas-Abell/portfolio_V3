@@ -42,8 +42,8 @@ const Featured: React.FC<FeaturedProps> = ({
 
   return (
     <div
-      className={`w-full flex flex-col gap-4 lg:gap-0 lg:min-h-screen text- rounded-lg ${
-        fromRight ? "lg:flex-row bg-pink-50" : "lg:flex-row-reverse"
+      className={`w-full flex flex-col gap-4 lg:gap-0 lg:min-h-screen ${
+        fromRight ? "lg:flex-row bg-dark text-light" : "lg:flex-row-reverse"
       } items-center justify-center px-4 py-4 lg:py-12`}
     >
       <FramerMotionWrapper
@@ -56,7 +56,7 @@ const Featured: React.FC<FeaturedProps> = ({
 
       <div className="w-full relative border-2 border-black">
         <div
-          className={`absolute h-full top-0 left-0 bg-gray-600/60 z-10 ease-in-out duration-1000 ${
+          className={`absolute h-full top-0 left-0 bg-dark z-10 ease-in-out duration-1000 ${
             showVideo ? "w-0" : "w-full"
           }`}
         />
@@ -80,7 +80,7 @@ const Featured: React.FC<FeaturedProps> = ({
           <h3 className={`${fromRight && "text-end"} text-5xl`}>{title}</h3>
         </FramerMotionWrapper>
 
-        <div className="bg-[#dbecfd] py-4 px-4 lg:px-8 rounded-lg z-0 shadow-md shadow-purple-800">
+        <div className=" bg-darkAccent shadow-dark text-light py-4 px-4 lg:px-8 rounded-lg z-0 shadow-md">
           <p>{description}</p>
           <div className="w-full">
             <ul className="flex items-center justify-center gap-4 pt-4">

@@ -27,7 +27,7 @@ const Contact = () => {
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom" className="w-full p-4">
         <div className="grid lg:grid-cols-5 gap-8">
-          <div className="col-span-3 lg:col-span-2 shadow-gray-400 rounded-xl p-4 text-center border shadow-md">
+          <div className="col-span-3 lg:col-span-2 shadow-gray-400 rounded-xl p-4 text-center border shadow-md bg-dark text-light">
             <div className="p-8 lg:p-4 h-full">
               <div className="w-full h-auto flex justify-center items-center">
                 <Image
@@ -46,20 +46,20 @@ const Contact = () => {
               <div className="flex items-center justify-center w-full gap-4 py-2 text-gray-400">
                 <Link
                   href="https://github.com/Nicholas-Abell"
-                  className="hover:text-black rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
-                  >
+                  className="hover:text-accent rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
+                >
                   <SiGithub size={25} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/nicholas-abell-348807192/"
-                  className="hover:text-black rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
-                  >
+                  className="hover:text-accent rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
+                >
                   <SiLinkedin size={25} />
                 </Link>
                 <Link
                   href="mailto:nicholaswabell@gmail.com"
-                  className="hover:text-black rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
-                  >
+                  className="hover:text-accent rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
+                >
                   <SiGmail size={25} />
                 </Link>
               </div>
@@ -67,7 +67,7 @@ const Contact = () => {
           </div>
           <div
             id="email"
-            className="col-span-3 w-full shadow-gray-400 rounded-xl lg:p-4 border shadow-md"
+            className="col-span-3 w-full shadow-gray-400 rounded-xl lg:p-4 border shadow-md bg-dark"
           >
             <div className="p-4">
               <form
@@ -76,14 +76,18 @@ const Contact = () => {
               >
                 <div className="grid grid-cols-2 gap-2 w-full py-2">
                   <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">Name</label>
+                    <label className="uppercase text-sm py-2 text-light">
+                      Name
+                    </label>
                     <input
                       type="text"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">Phone #</label>
+                    <label className="uppercase text-sm py-2 text-light">
+                      Phone #
+                    </label>
                     <input
                       name="phone"
                       type="text"
@@ -92,7 +96,9 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Email</label>
+                  <label className="uppercase text-sm py-2 text-light">
+                    Email
+                  </label>
                   <input
                     name="email"
                     type="email"
@@ -100,7 +106,9 @@ const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Subject</label>
+                  <label className="uppercase text-sm py-2 text-light">
+                    Subject
+                  </label>
                   <input
                     name="subject"
                     type="text"
@@ -108,7 +116,9 @@ const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Message</label>
+                  <label className="uppercase text-sm py-2 text-light">
+                    Message
+                  </label>
                   <textarea
                     name="text-area"
                     rows={6}
@@ -125,7 +135,7 @@ const Contact = () => {
                   name="_autoresponse"
                   value="Thank you for contacting me. I will get in touch soon."
                 />
-                <button className="w-full my-4 p-4 hover:duration-200 ease-in text-gray-800 bg-blue-200 hover:bg-blue-100 border rounded-lg duration-200">
+                <button className="w-full my-4 p-4 hover:duration-200 ease-in text-gray-800 bg-darkAccent hover:bg-accent rounded-lg duration-200">
                   Send Message
                 </button>
               </form>

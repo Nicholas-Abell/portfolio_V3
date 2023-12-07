@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({
   siteTitle,
 }) => {
   return (
-    <div className="flex flex-col items-center drop-shadow-lg">
+    <div className="flex flex-col items-center drop-shadow-lg shadow-darkAccent">
       <Image
         src={image}
         width={160}
@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({
       />
       <div className="w-full bg-light p-4 rounded-lg flex flex-col items-center justify-between gap-8 pt-24 h-full">
         <div className="flex flex-col items-center gap-2">
-          <ImQuotesLeft size={25} className="text-accent" />
+          <ImQuotesLeft size={25} className="text-main" />
           <p className="text-gray-600 text-xl px-12">{content}</p>
         </div>
         <div>

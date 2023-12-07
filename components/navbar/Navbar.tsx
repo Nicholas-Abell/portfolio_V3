@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     <div
       className={
         shadow
-          ? `w-full fixed h-20 shadow-xl z-[100] bg-accent hover:duration-200 ease-in no-print`
+          ? `w-full fixed h-20 shadow-xl z-[100] bg-darker text-light hover:duration-200 ease-in no-print`
           : `w-full fixed h-20 z-[100] bg-light no-print`
       }
     >
@@ -51,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         </div>
         <div>
           <FramerMotionWrapper variant="fromTop" duration={0.8}>
-            <ul className="hidden md:flex text-gray-900 font-bold">
+            <ul className="hidden md:flex font-bold">
               <Link
                 href="/#projects"
                 scroll={true}
