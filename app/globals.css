@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --light: #F4F4EF;
+  --light-accent: #E3927A;
+  --main: #BE6081;
+  --dark-accent: #A66494;
+  --dark: #3A3551;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,10 +28,9 @@ html{
 
 body {
   color: black;
-  background: white;
+  background: #F4F9FA;
 }
 
 .test{
   border: solid red;
 }
-
