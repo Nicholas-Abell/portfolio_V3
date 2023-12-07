@@ -80,7 +80,7 @@ const Featured: React.FC<FeaturedProps> = ({
           <h3 className={`${fromRight && "text-end"} text-5xl`}>{title}</h3>
         </FramerMotionWrapper>
 
-        <div className=" bg-darkAccent shadow-dark text-light py-4 px-4 lg:px-8 rounded-lg z-0 shadow-md">
+        <div className=" bg-darker shadow-dark text-light py-4 px-4 lg:px-8 rounded-lg z-0 shadow-md">
           <p>{description}</p>
           <div className="w-full">
             <ul className="flex items-center justify-center gap-4 pt-4">
