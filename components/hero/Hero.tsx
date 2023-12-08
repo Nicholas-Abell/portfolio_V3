@@ -1,52 +1,67 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import FramerMotionWrapper from "../shared/FramerMotionWrapper";
-import {
-  SiExpress,
-  SiGithub,
-  SiGmail,
-  SiLinkedin,
-  SiMongodb,
-  SiNodedotjs,
-  SiReact,
-} from "react-icons/si";
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 
 type HeroProps = {};
 
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <section className="w-full h-screen pt-20 bg-light text-light grid grid-cols-3 relative">
-      <div className="grid grid-cols-3 col-span-2 grid-rows-5 p-4 pr-2 gap-4">
-        <div className="bg-gradient-to-r from-dark to-darker rounded-lg col-span-3 row-span-4 text-light p-4 md:p-12">
-          <h1>NICHOLAS ABELL</h1>
+    <section className="w-full min-h-screen pt-20 bg-light text-light grid grid-cols-3 relative">
+      <div className="grid grid-cols-3 col-span-3 sm:col-span-2 grid-rows-5 p-4 pb-0 sm:pb-4 sm:pr-2 gap-2 sm:gap-4">
+        <div className="relative bg-gradient-to-r from-dark to-darker rounded-lg col-span-3 row-span-4 text-light p-4 md:p-12 flex flex-col justify-between">
+          <div>
+            <p className="text-gray-300 text-xl lg:text-4xl font-bold">
+              Software Developer
+            </p>
+            <h1 className="pt-8 md:pt-4 text-4xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-9xl font-bold text-main">
+              NICHOLAS <br className="hidden sm:block" /> ABELL
+            </h1>
+          </div>
+          <div className="sm:ml-auto mt-auto bottom-0 right-0 text-sm lg:text-base xl:text-lg py-2 w-full sm:w-[60%] md:w-[40%] sm:h-[40%]">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+              ratione quia. Repudiandae fugit obcaecati quae eligendi dicta odio
+              beatae alias saepe
+            </p>
+          </div>
         </div>
-        <div className="bg-main rounded-lg"></div>
-        <button className="col-span-2 rounded-lg bg-darkAccent">push</button>
+        <div className="bg-main rounded-lg row-span-2"></div>
+        <div className="rounded-lg bg-darkAccent col-span-2 row-span-2"></div>
       </div>
-      <div className="h-full grid-cols-3 grid-rows-4 grid gap-2 p-4 pl-2">
-        <div className="bg-gradient-to-r from-dark to-darker rounded-xl col-span-3 row-span-2 relative flex justify-center items-center">
+      <div className="h-full grid-cols-3 grid-rows-6 grid gap-2 p-4 pt-2 sm:pt-4 pl-2 col-span-3 sm:col-span-1">
+        <div className="bg-dark rounded-xl col-span-3 relative flex justify-center items-center row-span-3">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <div className="relative w-[120px] h-[120px] md:w-[240px] md:h-[240px]">
+            <div className="relative w-[160px] h-[160px] lg:w-[240px] lg:h-[240px]">
               <Image
                 src="/profile.png"
                 alt="profile"
                 fill
-                className=" object-fill rounded-full shadow-lg shadow-dark"
+                className=" object-fill rounded-lg"
               />
-            </div>
-            <div className="grid grid-cols-3 md:grid-cols-1 gap-4">
-              <div className="bg-gray-200 p-4"></div>
-              <div className="bg-gray-200 p-4"></div>
-              <div className="bg-gray-200 p-4"></div>
             </div>
           </div>
         </div>
-        <div className="bg-main rounded-lg"></div>
-        <div className="bg-darkAccent rounded-lg relative hidden lg:block"></div>
-        <div className="bg-accent rounded-lg col-span-2 lg:col-span-1"></div>
-        <div className="rounded-xl col-span-3 row-span-1 bg-dark"></div>
+        <Link
+          href="/"
+          className="bg-main row-span-1 rounded-lg flex justify-center items-center"
+        >
+          <SiGithub size={45} className="text-light" />
+        </Link>
+        <Link
+          href="/"
+          className="bg-darkAccent row-span-1 rounded-lg flex justify-center items-center"
+        >
+          <SiLinkedin size={45} className="text-light" />
+        </Link>
+        <Link
+          href="/"
+          className="bg-accent row-span-1 rounded-lg flex justify-center items-center"
+        >
+          <SiGmail size={45} className="text-light" />
+        </Link>
+        <div className="rounded-xl col-span-3 bg-dark row-span-2"></div>
       </div>
     </section>
   );
