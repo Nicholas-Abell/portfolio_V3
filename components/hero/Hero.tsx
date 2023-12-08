@@ -31,18 +31,17 @@ const Hero: React.FC<HeroProps> = () => {
         <div className="rounded-lg bg-darkAccent col-span-2 row-span-2" />
       </div>
       <div className="h-full grid-cols-3 grid-rows-6 grid gap-2 p-4 pt-2 sm:pt-4 pl-2 col-span-3 sm:col-span-1">
-        <div className="bg-gradient-to-r from-dark to-darker rounded-xl col-span-3 relative flex justify-center items-center row-span-3">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <div className="relative w-[160px] h-[160px] lg:w-[240px] lg:h-[240px]">
-              <Image
-                src="/profile.png"
-                alt="profile"
-                fill
-                className=" object-fill rounded-lg"
-              />
-            </div>
+        <div className="bg-gradient-to-r from-dark to-darker rounded-xl col-span-2 sm:col-span-3 relative flex justify-center items-center row-span-3">
+          <div className="relative w-[160px] h-[160px] lg:w-[240px] lg:h-[240px]">
+            <Image
+              src="/profile.png"
+              alt="profile"
+              fill
+              className=" object-fill rounded-lg"
+            />
           </div>
         </div>
+        <div className="bg-accent row-span-3 rounded-lg block sm:hidden" />
         <Link
           href="https://github.com/Nicholas-Abell"
           className="row-span-2 sm:row-span-1"
@@ -69,7 +68,7 @@ const Hero: React.FC<HeroProps> = () => {
               rotate: [5, -5, 5, -5, 0],
               transition: { duration: 0.3 },
             }}
-            className="bg-darkAccent rounded-lg flex justify-center items-center w-full h-full"
+            className="bg-accent rounded-lg flex justify-center items-center w-full h-full"
           >
             <SiLinkedin size={45} className="text-light" />
           </motion.div>
@@ -84,7 +83,7 @@ const Hero: React.FC<HeroProps> = () => {
               rotate: [-5, 5, -5, 5, 0],
               transition: { duration: 0.3 },
             }}
-            className="bg-main w-full h-full rounded-lg flex
+            className="bg-darkAccent w-full h-full rounded-lg flex
             justify-center items-center"
           >
             <SiGmail size={45} className="text-light" />
