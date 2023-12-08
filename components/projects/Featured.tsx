@@ -43,7 +43,9 @@ const Featured: React.FC<FeaturedProps> = ({
   return (
     <div
       className={`w-full flex flex-col gap-4 lg:gap-0 lg:min-h-screen ${
-        fromRight ? "lg:flex-row bg-dark text-light" : "lg:flex-row-reverse"
+        fromRight
+          ? "lg:flex-row bg-gradient-to-r from-dark to-darker text-light"
+          : "lg:flex-row-reverse"
       } items-center justify-center px-4 py-4 lg:py-12`}
     >
       <FramerMotionWrapper
@@ -51,7 +53,9 @@ const Featured: React.FC<FeaturedProps> = ({
         className="py-2 lg:hidden"
       >
         <p className={`${fromRight && "text-end"} pb-2`}>Featured Project</p>
-        <h3 className={`${fromRight && "text-end"} text-5xl font-semibold`}>{title}</h3>
+        <h3 className={`${fromRight && "text-end"} text-5xl font-semibold`}>
+          {title}
+        </h3>
       </FramerMotionWrapper>
 
       <div className="w-full relative border-2 border-black">

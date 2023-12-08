@@ -8,7 +8,7 @@ const Skills: React.FC<SkillsProps> = () => {
   return (
     <section
       id="skills"
-      className="w-full min-h-screen bg-dark mx-auto px-2.5 md:px-20 py-24"
+      className="w-full min-h-screen bg-gradient-to-r from-dark to-darker mx-auto px-2.5 md:px-20 py-24"
     >
       <FramerMotionWrapper variant="fromBottom">
         <div className="pb-8 text-center ">

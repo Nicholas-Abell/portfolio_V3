@@ -27,7 +27,7 @@ const Contact = () => {
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom" className="w-full p-4">
         <div className="grid lg:grid-cols-5 gap-8">
-          <div className="col-span-3 lg:col-span-2 shadow-gray-400 rounded-xl p-4 text-center border shadow-md bg-dark text-light">
+          <div className="col-span-3 lg:col-span-2 shadow-gray-400 rounded-xl p-4 text-center border shadow-md bg-gradient-to-r from-dark to-darker text-light">
             <div className="p-8 lg:p-4 h-full">
               <div className="w-full h-auto flex justify-center items-center">
                 <Image
@@ -67,7 +67,7 @@ const Contact = () => {
           </div>
           <div
             id="email"
-            className="col-span-3 w-full shadow-gray-400 rounded-xl lg:p-4 border shadow-md bg-dark"
+            className="col-span-3 w-full shadow-gray-400 rounded-xl lg:p-4 border shadow-md bg-gradient-to-r from-dark to-darker"
           >
             <div className="p-4">
               <form

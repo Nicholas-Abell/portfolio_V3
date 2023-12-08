@@ -27,11 +27,11 @@ const Hero: React.FC<HeroProps> = () => {
             </p>
           </div>
         </div>
-        <div className="bg-main rounded-lg row-span-2"></div>
-        <div className="rounded-lg bg-darkAccent col-span-2 row-span-2"></div>
+        <div className="bg-main rounded-lg row-span-2" />
+        <div className="rounded-lg bg-darkAccent col-span-2 row-span-2" />
       </div>
       <div className="h-full grid-cols-3 grid-rows-6 grid gap-2 p-4 pt-2 sm:pt-4 pl-2 col-span-3 sm:col-span-1">
-        <div className="bg-dark rounded-xl col-span-3 relative flex justify-center items-center row-span-3">
+        <div className="bg-gradient-to-r from-dark to-darker rounded-xl col-span-3 relative flex justify-center items-center row-span-3">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <div className="relative w-[160px] h-[160px] lg:w-[240px] lg:h-[240px]">
               <Image
@@ -44,24 +44,24 @@ const Hero: React.FC<HeroProps> = () => {
           </div>
         </div>
         <Link
-          href="/"
+          href="https://github.com/Nicholas-Abell"
           className="bg-main row-span-1 rounded-lg flex justify-center items-center"
         >
           <SiGithub size={45} className="text-light" />
         </Link>
         <Link
-          href="/"
+          href="https://www.linkedin.com/in/nicholas-abell-348807192/"
           className="bg-darkAccent row-span-1 rounded-lg flex justify-center items-center"
         >
           <SiLinkedin size={45} className="text-light" />
         </Link>
         <Link
-          href="/"
+          href="mailto:nicholaswabell@gmail.com"
           className="bg-accent row-span-1 rounded-lg flex justify-center items-center"
         >
           <SiGmail size={45} className="text-light" />
         </Link>
-        <div className="rounded-xl col-span-3 bg-dark row-span-2"></div>
+        <div className="rounded-xl col-span-3 bg-gradient-to-r from-dark to-darker row-span-2" />
       </div>
     </section>
   );
