@@ -125,11 +125,7 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                   />
                 </div>
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://nicholas-abell-mr5i.vercel.app/"
-                />
+                <input type="hidden" name="_next" value="/" />
                 <input
                   type="hidden"
                   name="_autoresponse"
