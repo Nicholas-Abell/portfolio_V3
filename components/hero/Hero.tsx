@@ -22,9 +22,8 @@ const Hero: React.FC<HeroProps> = () => {
           </div>
           <div className="sm:ml-auto mt-auto bottom-0 right-0 text-sm lg:text-base xl:text-lg py-2 w-full sm:w-[60%] md:w-[40%] sm:h-[40%]">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-              ratione quia. Repudiandae fugit obcaecati quae eligendi dicta odio
-              beatae alias saepe
+              I am a passionate software developer dedicated to solving
+              real-world problems through innovative solutions.
             </p>
           </div>
         </div>
