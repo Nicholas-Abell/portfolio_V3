@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type HeroProps = {};
 
@@ -45,21 +46,50 @@ const Hero: React.FC<HeroProps> = () => {
         </div>
         <Link
           href="https://github.com/Nicholas-Abell"
-          className="bg-main row-span-1 rounded-lg flex justify-center items-center"
+          className="row-span-2 sm:row-span-1"
         >
-          <SiGithub size={45} className="text-light" />
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+              rotate: [-5, 5, -5, 5, 0],
+              transition: { duration: 0.3 },
+            }}
+            className="bg-main w-full h-full rounded-lg flex
+            justify-center items-center"
+          >
+            <SiGithub size={45} className="text-light" />
+          </motion.div>
         </Link>
         <Link
           href="https://www.linkedin.com/in/nicholas-abell-348807192/"
-          className="bg-darkAccent row-span-1 rounded-lg flex justify-center items-center"
+          className="row-span-2 sm:row-span-1"
         >
-          <SiLinkedin size={45} className="text-light" />
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+              rotate: [5, -5, 5, -5, 0],
+              transition: { duration: 0.3 },
+            }}
+            className="bg-darkAccent rounded-lg flex justify-center items-center w-full h-full"
+          >
+            <SiLinkedin size={45} className="text-light" />
+          </motion.div>
         </Link>
         <Link
           href="mailto:nicholaswabell@gmail.com"
-          className="bg-accent row-span-1 rounded-lg flex justify-center items-center"
+          className="row-span-2 sm:row-span-1"
         >
-          <SiGmail size={45} className="text-light" />
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+              rotate: [-5, 5, -5, 5, 0],
+              transition: { duration: 0.3 },
+            }}
+            className="bg-main w-full h-full rounded-lg flex
+            justify-center items-center"
+          >
+            <SiGmail size={45} className="text-light" />
+          </motion.div>
         </Link>
         <div className="rounded-xl col-span-3 bg-gradient-to-r from-dark to-darker row-span-2" />
       </div>
