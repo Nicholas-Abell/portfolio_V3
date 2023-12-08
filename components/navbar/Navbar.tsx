@@ -33,11 +33,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
 
   return (
     <div
-      className={
-        shadow
-          ? `w-full fixed h-20 shadow-xl z-[100] bg-light hover:duration-200 ease-in no-print`
-          : `w-full fixed h-20 z-[100] bg-darker text-light no-print`
-      }
+      className={`${
+        shadow && "shadow shadow-gray-500"
+      } bg-darker text-light w-full fixed h-20 z-[100] hover:duration-200 ease-in no-print`}
     >
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <div className="flex items-center justify-center gap-4">
@@ -87,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
       <div
         className={`${
           mobileNav ? "w-[75%] sm:w-[60%]" : "w-0"
-        } fixed top-0 z-50 h-screen bg-white ease-in-out duration-500 overflow-hidden`}
+        } fixed top-0 z-50 h-screen bg-darker ease-in-out duration-500 overflow-hidden`}
       >
         <div className="w-full flex justify-between items-center p-4 border-b-2 border-gray-400">
           <h1 className="dark:text-gray-100 text-black">Nick A</h1>
@@ -129,9 +127,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             </li>
           </ul>
         </div>
-        <div className="pt-40">
+        {/* <div className="pt-40">
           <p>{"Let's Connect"}</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
