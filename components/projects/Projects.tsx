@@ -18,14 +18,15 @@ const Projects: React.FC<ProjectsProps> = () => {
       >
         <div>
           <p>What I can Do</p>
-          <h2 className="text-4xl md:text-6xl font-bold text-darker">PROJECTS</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-darker">
+            PROJECTS
+          </h2>
         </div>
       </FramerMotionWrapper>
 
       <Featured
         title="Dating App"
-        githubLink="/"
-        liveLink="/"
+        githubLink="https://github.com/Nicholas-Abell/dating_app"
         description="A full stack dating application implementing Next Js server
         actions. Features include: user registration, profile Management,
         messaging, and filtering based on user preferences."
@@ -35,8 +36,8 @@ const Projects: React.FC<ProjectsProps> = () => {
 
       <Featured
         title="Movie Database"
-        githubLink="/"
-        liveLink="/"
+        githubLink="https://github.com/Nicholas-Abell/movie_database"
+        liveLink="https://movie-database-4bf43.web.app/"
         description="Curious about upcoming movies and where they are Streaming? This app will tell you. Built in ReactJs with a Firebase backend for user authentication."
         skills={["ReactJs", "Firebase", "Tailwind Css"]}
         video="/clipMovieDatabase.mp4"
@@ -45,8 +46,8 @@ const Projects: React.FC<ProjectsProps> = () => {
 
       <Featured
         title="Reddit Clone"
-        githubLink="/"
-        liveLink="/"
+        githubLink="https://github.com/Nicholas-Abell/reddit_clone"
+        liveLink="https://reddit-clone-4fg5-git-main-nicholas-abell.vercel.app/"
         description="A full stack dating application implementing Next Js server
         actions. Features include: user registration, profile Management,
         messaging, and filtering based on user preferences."

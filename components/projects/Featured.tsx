@@ -9,7 +9,7 @@ import { inView, useInView } from "framer-motion";
 type FeaturedProps = {
   title: string;
   githubLink: string;
-  liveLink: string;
+  liveLink?: string;
   description: string;
   skills: string[];
   fromRight?: boolean;
@@ -100,13 +100,17 @@ const Featured: React.FC<FeaturedProps> = ({
             fromRight ? "justify-end" : "justify-start"
           } `}
         >
-          <Link
-            href={liveLink}
-            className="flex flex-col items-center hover:text-gray-400"
-          >
-            <CgWebsite size={40} />
-            <p>Live</p>
-          </Link>
+          {liveLink ? (
+            <Link
+              href={liveLink}
+              className="flex flex-col items-center hover:text-gray-400"
+            >
+              <CgWebsite size={40} />
+              <p>Live</p>
+            </Link>
+          ) : (
+            <></>
+          )}
           <Link
             href={githubLink}
             className="flex flex-col items-center hover:text-gray-400"
