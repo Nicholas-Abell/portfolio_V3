@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full min-h-screen flex flex-col justify-center items-center gap-12 px-2.5 xl:px-20 py-24"
+      className="w-full min-h-screen flex flex-col justify-center items-center gap-12 py-24"
     >
       <FramerMotionWrapper variant="fromLeft">
         <div className="pb-8 text-center ">
@@ -173,14 +173,16 @@ const Contact = () => {
           </div>
         </div>
       </FramerMotionWrapper>
-      <motion.button
-        whileHover={{ y: "-5%" }}
-        whileTap={{ scale: 0.9 }}
-        onClick={scrollToTop}
-        className="w-full flex justify-center bg-dark text-light py-12 shadow-lg shadow-gray-400 border rounded-xl"
-      >
-        <HiChevronDoubleUp size={30} className="m-auto" />
-      </motion.button>
+      <div className="w-full px-4">
+        <motion.button
+          whileHover={{ y: "-5%" }}
+          whileTap={{ scale: 0.9 }}
+          onClick={scrollToTop}
+          className="w-full flex justify-center bg-dark text-light py-12 shadow-lg shadow-gray-400 border rounded-xl"
+        >
+          <HiChevronDoubleUp size={30} className="m-auto" />
+        </motion.button>
+      </div>
     </div>
   );
 };
