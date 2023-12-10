@@ -172,15 +172,15 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center py-12">
-          <button
-            onClick={scrollToTop}
-            className="rounded-full cursor-pointer p-3 shadow-lg shadow-gray-300 hover:shadow-sm hover:shadow-purple-200 duration-200 ease-in-out"
-          >
-            <HiChevronDoubleUp size={30} className="m-auto" />
-          </button>
-        </div>
       </FramerMotionWrapper>
+      <motion.button
+        whileHover={{ y: "-5%" }}
+        whileTap={{ scale: 0.9 }}
+        onClick={scrollToTop}
+        className="w-full flex justify-center bg-dark text-light py-12 shadow-lg shadow-gray-400 border rounded-xl"
+      >
+        <HiChevronDoubleUp size={30} className="m-auto" />
+      </motion.button>
     </div>
   );
 };
