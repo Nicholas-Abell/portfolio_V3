@@ -20,14 +20,13 @@ const Testimonials: React.FC<TestimonialsProps> = () => {
         <div className="grid xl:grid-cols-3 py-4 md:gap-4 md:px-0 grid-rows-1">
           <Card
             name="Mary"
-            link="thistleandthornsllc.com"
+            link="https://www.thistleandthornsllc.com/"
             siteTitle="Thistle & Thorns LLC"
             image="/mary-kleine.jpg"
             content="Our site really took off! We didn't know where to start, Nick just took over and a week later our site was live, and our shop was on google maps."
           />
           <Card
             name="Rick"
-            link="thistleandthornsllc.com"
             image="/rick.jpg"
             content="Nick helped us do things with google sheets I didn't know was possible. Recording information has never been easier."
           />

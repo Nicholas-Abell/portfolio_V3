@@ -7,7 +7,7 @@ import { FaLink } from "react-icons/fa";
 type CardProps = {
   content: string;
   name: string;
-  link: string;
+  link?: string;
   siteTitle?: string;
   image: any;
 };
@@ -36,15 +36,16 @@ const Card: React.FC<CardProps> = ({
         <div>
           <p className="text-center py-8 font-bold">{name}</p>
 
-          <Link
-            href={link}
-            className={`${
-              siteTitle ? " visible" : " invisible"
-            } flex items-center gap-2 text-gray-400 whitespace-nowrap`}
-          >
-            {siteTitle}
-            <FaLink />
-          </Link>
+          {link && (
+            <Link
+              href={link}
+              className="
+               flex items-center gap-2 text-gray-400 whitespace-nowrap"
+            >
+              {siteTitle}
+              <FaLink />
+            </Link>
+          )}
         </div>
       </div>
     </div>
