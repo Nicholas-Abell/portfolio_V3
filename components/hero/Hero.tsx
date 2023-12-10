@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = () => {
           className="row-span-4 col-span-3 grid grid-cols-3 gap-4"
         >
           <motion.div
-            initial={{ x: 400 }}
+            initial={{ x: "115%" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", stiffness: 60, delay: 1 }}
             className="bg-main rounded-lg row-span-2"
@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = () => {
             />
           </div>
         </div>
-        <div className="bg-accent row-span-3 rounded-lg block sm:hidden" />
+        <div className="bg-accent row-span-3 rounded-lg block sm:hidden z-10" />
         <Link
           href="https://github.com/Nicholas-Abell"
           className="row-span-2 sm:row-span-1 z-[2]"
@@ -81,10 +81,10 @@ const Hero: React.FC<HeroProps> = () => {
               rotate: [5, -5, 5, -5, 0],
               transition: { duration: 0.3 },
             }}
-            initial={{ x: -180, y: -150 }}
+            initial={{ x: "-105%", y: "-110%" }}
             animate={{ x: 0, y: 0 }}
             transition={{
-              y: { type: "spring", stiffness: 60, delay: 0 },
+              y: { type: "spring", stiffness: 50, delay: 0 },
               x: { type: "spring", stiffness: 60, delay: 1 },
             }}
             className="bg-accent rounded-lg flex justify-center items-center w-full h-full"
@@ -101,7 +101,7 @@ const Hero: React.FC<HeroProps> = () => {
               rotate: [-5, 5, -5, 5, 0],
               transition: { duration: 0.3 },
             }}
-            initial={{ y: 150 }}
+            initial={{ y: "-110%" }}
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 50, delay: 1 }}
             className="bg-darkAccent w-full h-full rounded-lg flex
