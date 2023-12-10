@@ -5,6 +5,7 @@ import Image from "next/image";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
@@ -27,9 +28,9 @@ const Contact = () => {
       </FramerMotionWrapper>
       <FramerMotionWrapper variant="fromBottom" className="w-full p-4">
         <div className="grid lg:grid-cols-5 gap-8">
-          <div className="col-span-3 lg:col-span-2 shadow-gray-400 rounded-xl p-4 text-center border shadow-md bg-gradient-to-r from-dark to-darker text-light">
-            <div className="p-8 lg:p-4 h-full">
-              <div className="w-full h-auto flex justify-center items-center">
+          <div className="col-span-3 lg:col-span-2 grid grid-cols-3 grid-rows-4 text-center gap-4">
+            <div className="h-full w-full row-span-3 col-span-3 border shadow-md shadow-gray-400 bg-gradient-to-r from-dark to-darker text-light rounded-xl z-10">
+              <div className="w-full h-auto flex justify-center items-center py-8">
                 <Image
                   src="/profile.png"
                   alt="profile"
@@ -42,29 +43,62 @@ const Contact = () => {
                 <h2 className="py-4 text-main">Nick Abell</h2>
                 <p>Software Developer</p>
               </div>
-              <p className="uppercase pt-24 text-center">Connect With Me</p>
-              <div className="flex items-center justify-center w-full gap-4 py-2 text-gray-400">
-                <Link
-                  href="https://github.com/Nicholas-Abell"
-                  className="hover:text-accent rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
-                >
-                  <SiGithub size={25} />
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/nicholas-abell-348807192/"
-                  className="hover:text-accent rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
-                >
-                  <SiLinkedin size={25} />
-                </Link>
-                <Link
-                  href="mailto:nicholaswabell@gmail.com"
-                  className="hover:text-accent rounded-full shadow-md shadow-gray-400 hover:shadow-purple-300 duration-200 ease-in-out p-2 flex justify-center items-center"
-                >
-                  <SiGmail size={25} />
-                </Link>
-              </div>
             </div>
+            <Link
+              href="https://github.com/Nicholas-Abell"
+              className="row-span-2 z-[2]"
+            >
+              <motion.div
+                whileHover={{
+                  rotate: [-5, 5, -5, 5, 0],
+                  transition: { duration: 0.3 },
+                }}
+                initial={{ y: -150 }}
+                animate={{ y: 0 }}
+                transition={{ type: "spring", stiffness: 50 }}
+                className="bg-main w-full h-full rounded-lg flex
+            justify-center items-center border shadow-md shadow-gray-400"
+              >
+                <SiGithub size={45} className="text-light" />
+              </motion.div>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/nicholas-abell-348807192/"
+              className="row-span-2 z-[1]"
+            >
+              <motion.div
+                whileHover={{
+                  rotate: [5, -5, 5, -5, 0],
+                  transition: { duration: 0.3 },
+                }}
+                initial={{ x: "-105%", y: "-110%" }}
+                animate={{ x: 0, y: 0 }}
+                transition={{
+                  y: { type: "spring", stiffness: 50, delay: 0 },
+                  x: { type: "spring", stiffness: 60, delay: 1 },
+                }}
+                className="bg-accent rounded-lg flex justify-center items-center w-full h-full border shadow-md shadow-gray-400"
+              >
+                <SiLinkedin size={45} className="text-light" />
+              </motion.div>
+            </Link>
+            <Link href="mailto:nicholaswabell@gmail.com" className="row-span-2">
+              <motion.div
+                whileHover={{
+                  rotate: [-5, 5, -5, 5, 0],
+                  transition: { duration: 0.3 },
+                }}
+                initial={{ y: "-110%" }}
+                animate={{ y: 0 }}
+                transition={{ type: "spring", stiffness: 50, delay: 1 }}
+                className="bg-darkAccent w-full h-full rounded-lg flex
+            justify-center items-center z-[1] border shadow-md shadow-gray-400"
+              >
+                <SiGmail size={45} className="text-light" />
+              </motion.div>
+            </Link>
           </div>
+
           <div
             id="email"
             className="col-span-3 w-full shadow-gray-400 rounded-xl lg:p-4 border shadow-md bg-gradient-to-r from-dark to-darker"
@@ -74,7 +108,7 @@ const Contact = () => {
                 action="https://formsubmit.co/nicholaswabell@gmail.com"
                 method="POST"
               >
-                <div className="grid grid-cols-2 gap-2 w-full py-2">
+                <div className="grid sm:grid-cols-2 gap-2 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2 text-light">
                       Name
