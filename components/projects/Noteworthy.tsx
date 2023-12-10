@@ -30,14 +30,14 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
       onMouseLeave={() => setOverlay(false)}
       onClick={() => setOverlay(true)}
     >
-      <div className="h-[320px] rounded-lg relative shadow-lg shadow-gray-400">
+      <div className="h-[240px] md:h-[320px] rounded-lg relative shadow-lg shadow-gray-400">
         <div
           className={`${
             overlay ? "w-full px-4" : "w-0"
-          } absolute h-full bg-darker z-10 duration-200 ease-in-out rounded-lg flex flex-col justify-between items-center py-12 overflow-hidden text-center text-white`}
+          } absolute h-full bg-darker z-10 duration-200 ease-in-out rounded-lg flex flex-col justify-between items-center py-4 md:py-12 overflow-hidden text-center text-white`}
         >
-          <p className="text-3xl font-bold">{title}</p>
-          <p className="text-left">{description}</p>
+          <p className="text-xl md:text-3xl font-bold">{title}</p>
+          <p className="text-sm md:text-base text-left">{description}</p>
           <div className="flex items-center gap-4">
             {liveLink && (
               <Link
@@ -59,7 +59,12 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
             )}
           </div>
         </div>
-        <Image src={image} alt={image} fill className="rounded-lg" />
+        <Image
+          src={image}
+          alt={image}
+          fill
+          className="rounded-lg object-fill"
+        />
       </div>
     </div>
   );

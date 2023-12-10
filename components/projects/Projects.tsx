@@ -68,8 +68,7 @@ const Projects: React.FC<ProjectsProps> = () => {
             <Noteworthy
               image="/imageThistle.png"
               title="Thistle & Thorns LLC"
-              description="A Squarespace site I designed and built for a local tattoo shop that
-              approached me after struggling with their chosen CMS. With a bounce
+              description="A Squarespace site I designed and built for a local tattoo shop. With a bounce
               rate under 40% the page has 2.7k views in its first three
               months. Currently on call as a webmaster"
               color="from-dark"
@@ -77,7 +76,7 @@ const Projects: React.FC<ProjectsProps> = () => {
             />
             <Noteworthy
               image="/imageSMS.png"
-              title="SMS Construction and Remodeling"
+              title="SMS Construction"
               description="A Website I built to help a small town handyman reach more clients. Currently hosted
               on Hostinger. I Set up Google analytics for client and used SEO best practices."
               color="from-dark"
