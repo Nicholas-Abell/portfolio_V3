@@ -31,15 +31,15 @@ const Hero: React.FC<HeroProps> = () => {
           initial={{ y: -200 }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
-          className="row-span-4 col-span-3 grid grid-cols-3 gap-4"
+          className="row-span-4 col-span-3 grid grid-cols-3 gap-2"
         >
           <motion.div
             initial={{ x: "115%" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", stiffness: 60, delay: 1 }}
-            className="bg-main rounded-lg row-span-2"
+            className="bg-main rounded-lg row-span-2 border shadow-md shadow-gray-400"
           />
-          <div className="rounded-lg bg-darkAccent col-span-2 row-span-2 z-10" />
+          <div className="rounded-lg bg-darkAccent col-span-2 row-span-2 z-10 border shadow-md shadow-gray-400" />
         </motion.div>
       </div>
       <div className="h-full grid-cols-3 grid-rows-6 grid gap-2 p-4 pt-2 sm:pt-4 pl-2 col-span-3 sm:col-span-1">
@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = () => {
             />
           </div>
         </div>
-        <div className="bg-accent row-span-3 rounded-lg block sm:hidden z-10" />
+        <div className="bg-accent row-span-3 rounded-lg block sm:hidden z-10 border shadow-md shadow-gray-400" />
         <Link
           href="https://github.com/Nicholas-Abell"
           className="row-span-2 sm:row-span-1 z-[2]"
@@ -67,7 +67,7 @@ const Hero: React.FC<HeroProps> = () => {
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 50 }}
             className="bg-main w-full h-full rounded-lg flex
-            justify-center items-center"
+            justify-center items-center border shadow-md shadow-gray-400"
           >
             <SiGithub size={45} className="text-light" />
           </motion.div>
@@ -87,7 +87,7 @@ const Hero: React.FC<HeroProps> = () => {
               y: { type: "spring", stiffness: 50, delay: 0 },
               x: { type: "spring", stiffness: 60, delay: 1 },
             }}
-            className="bg-accent rounded-lg flex justify-center items-center w-full h-full"
+            className="bg-accent rounded-lg flex justify-center items-center w-full h-full border shadow-md shadow-gray-400"
           >
             <SiLinkedin size={45} className="text-light" />
           </motion.div>
@@ -105,7 +105,7 @@ const Hero: React.FC<HeroProps> = () => {
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 50, delay: 1 }}
             className="bg-darkAccent w-full h-full rounded-lg flex
-            justify-center items-center z-[1]"
+            justify-center items-center z-[1] border shadow-md shadow-gray-400"
           >
             <SiGmail size={45} className="text-light" />
           </motion.div>
