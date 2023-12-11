@@ -53,10 +53,10 @@ const Contact = () => {
                   rotate: [-5, 5, -5, 5, 0],
                   transition: { duration: 0.3 },
                 }}
-                initial={{ y: -150 }}
-                animate={{ y: 0 }}
+                // initial={{ y: -150 }}
+                // animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 50 }}
-                className="bg-main w-full h-full rounded-lg flex
+                className="bg-main w-full h-full max-h-32 sm:max-h-max rounded-lg flex
             justify-center items-center border shadow-md shadow-gray-400"
               >
                 <SiGithub size={45} className="text-light" />
@@ -71,13 +71,13 @@ const Contact = () => {
                   rotate: [5, -5, 5, -5, 0],
                   transition: { duration: 0.3 },
                 }}
-                initial={{ x: "-105%", y: "-110%" }}
-                animate={{ x: 0, y: 0 }}
+                // initial={{ x: "-105%", y: "-110%" }}
+                // animate={{ x: 0, y: 0 }}
                 transition={{
                   y: { type: "spring", stiffness: 50, delay: 0 },
                   x: { type: "spring", stiffness: 60, delay: 1 },
                 }}
-                className="bg-accent rounded-lg flex justify-center items-center w-full h-full border shadow-md shadow-gray-400"
+                className="bg-accent rounded-lg flex justify-center items-center w-full h-full max-h-32 sm:max-h-max border shadow-md shadow-gray-400"
               >
                 <SiLinkedin size={45} className="text-light" />
               </motion.div>
@@ -88,10 +88,10 @@ const Contact = () => {
                   rotate: [-5, 5, -5, 5, 0],
                   transition: { duration: 0.3 },
                 }}
-                initial={{ y: "-110%" }}
-                animate={{ y: 0 }}
+                // initial={{ y: "-110%" }}
+                // animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 50, delay: 1 }}
-                className="bg-darkAccent w-full h-full rounded-lg flex
+                className="bg-darkAccent w-full h-full max-h-32 sm:max-h-max rounded-lg flex
             justify-center items-center z-[1] border shadow-md shadow-gray-400"
               >
                 <SiGmail size={45} className="text-light" />
