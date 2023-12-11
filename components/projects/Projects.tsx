@@ -54,13 +54,13 @@ const Projects: React.FC<ProjectsProps> = () => {
       <div className="w-full relative bg-light">
         <div className="bg-accent/40 h-[120px] md:h-[320px] w-[100vw] absolute top-10 md:top-0 lg:left-80 left-40 rounded-xl" />
         <FramerMotionWrapper variant="fromLeft">
-          <h2 className="text-4xl md:text-6xl pb-4 pt-24">
+          <h2 className="text-4xl md:text-6xl pb-4 pt-24 px-4">
             Other Noteworthy Projects
           </h2>
         </FramerMotionWrapper>
 
         <FramerMotionWrapper variant="fromBottom">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 px-4 lg:px-16  xl:px-24 overflow-hidden">
+          <div className="w-full max-w-[1980px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 px-4 lg:px-16  xl:px-24 overflow-hidden">
             <Noteworthy
               image="/imageThistle.png"
               title="Thistle & Thorns LLC"
