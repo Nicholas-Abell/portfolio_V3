@@ -13,7 +13,7 @@ const Services: React.FC<ServicesProps> = () => {
   return (
     <section
       id="services"
-      className="w-full min-h-screen flex flex-col justify-center items-center gap-12 mx-auto px-2.5 xl:px-20 py-24 text-stone-700"
+      className="w-full max-w-[1980px] min-h-screen flex flex-col justify-center items-center gap-12 mx-auto px-2.5 xl:px-20 py-24 text-stone-700"
     >
       <FramerMotionWrapper variant="fromBottom">
         <p className="text-gray-400">some of</p>
