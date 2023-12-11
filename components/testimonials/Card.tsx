@@ -26,7 +26,9 @@ const Card: React.FC<CardProps> = ({
         width={160}
         height={160}
         className=" rounded-full translate-y-1/2 border-8 border-light border-solid"
-        alt="a"
+        alt={name}
+        placeholder="blur"
+        blurDataURL={image}
       />
       <div className="w-full bg-light p-4 rounded-lg flex flex-col items-center justify-between gap-2 md:gap-8 pt-24 h-full">
         <div className="flex flex-col items-center gap-2">
