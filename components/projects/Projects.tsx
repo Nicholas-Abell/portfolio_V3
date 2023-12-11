@@ -18,9 +18,7 @@ const Projects: React.FC<ProjectsProps> = () => {
       >
         <div>
           <p>What I can Do</p>
-          <h2 className="text-4xl md:text-6xl font-bold text-darker">
-            PROJECTS
-          </h2>
+          <h2 className="text-6xl font-bold text-darker">PROJECTS</h2>
         </div>
       </FramerMotionWrapper>
 
@@ -48,15 +46,13 @@ const Projects: React.FC<ProjectsProps> = () => {
         title="Reddit Clone"
         githubLink="https://github.com/Nicholas-Abell/reddit_clone"
         liveLink="https://reddit-clone-4fg5-git-main-nicholas-abell.vercel.app/"
-        description="A full stack dating application implementing Next Js server
-        actions. Features include: user registration, profile Management,
-        messaging, and filtering based on user preferences."
+        description="A clone of the popular app. Join or create communities. Built with ReactJs with a firebase for user Authentication and profiles."
         skills={["ReactJs", "Firebase", "Tailwind"]}
         video="/clipRedditClone.mp4"
       />
 
       <div className="w-full relative bg-light">
-        <div className="bg-accent/40 h-[320px] w-[100vw] absolute top-0 lg:left-80 left-40 rounded-xl" />
+        <div className="bg-accent/40 h-[120px] md:h-[320px] w-[100vw] absolute top-10 md:top-0 lg:left-80 left-40 rounded-xl" />
         <FramerMotionWrapper variant="fromLeft">
           <h2 className="text-4xl md:text-6xl pb-4 pt-24">
             Other Noteworthy Projects
@@ -81,7 +77,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               on Hostinger. I Set up Google analytics for client and used SEO best practices."
               color="from-dark"
               liveLink="https://smsconstructionandremodeling.com/"
-              githubLink="https://smsconstructionandremodeling.com/"
+              githubLink="https://github.com/Nicholas-Abell/handy_man"
             />
             <Noteworthy
               image="/imageEverdell.png"
