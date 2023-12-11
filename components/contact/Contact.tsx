@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full min-h-screen flex flex-col justify-center items-center gap-12 py-24"
+      className="w-full max-w-[1980px] mx-auto min-h-screen flex flex-col justify-center items-center gap-12 py-24"
     >
       <FramerMotionWrapper variant="fromLeft">
         <div className="pb-8 text-center ">
