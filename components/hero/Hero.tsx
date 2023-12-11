@@ -9,7 +9,7 @@ type HeroProps = {};
 
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <section className="w-full min-h-screen pt-20 bg-light text-light grid grid-cols-3 relative">
+    <section className="w-full min-h-screen pt-10 bg-light text-light grid grid-cols-3 relative">
       <div className="grid grid-cols-3 col-span-3 sm:col-span-2 grid-rows-5 p-4 pb-0 sm:pb-4 sm:pr-2 gap-2 sm:gap-4">
         <div className="relative bg-gradient-to-r from-dark to-darker rounded-lg col-span-3 row-span-4 text-light p-4 md:p-12 flex flex-col justify-between z-20">
           <div>

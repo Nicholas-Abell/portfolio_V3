@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     <div
       className={`${
         shadow && "shadow shadow-gray-500"
-      } bg-darker text-light w-full fixed h-20 z-[100] hover:duration-200 ease-in no-print`}
+      } bg-darker text-light w-full fixed h-18 z-[100] hover:duration-200 ease-in no-print`}
     >
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <div className="flex items-center justify-center gap-4">
