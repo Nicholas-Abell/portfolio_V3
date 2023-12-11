@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = () => {
           </div>
         </div>
         <motion.div
-          initial={{ y: -200 }}
+          initial={{ y: "-200%" }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
           className="row-span-4 col-span-3 grid grid-cols-3 gap-2"
@@ -42,7 +42,7 @@ const Hero: React.FC<HeroProps> = () => {
           <div className="rounded-lg bg-darkAccent col-span-2 row-span-2 z-10 border shadow-md shadow-gray-400" />
         </motion.div>
       </div>
-      <div className="h-full grid-cols-3 grid-rows-6 grid gap-2 p-4 pt-2 sm:pt-4 pl-2 col-span-3 sm:col-span-1">
+      <div className="h-full grid-cols-3 grid-rows-6 grid gap-2 xl:gap-3 p-4 pt-2 sm:pt-4 pl-2 col-span-3 sm:col-span-1">
         <div className="bg-gradient-to-r from-dark to-darker rounded-xl col-span-2 sm:col-span-3 relative flex justify-center items-center row-span-3 z-10 py-4">
           <div className="relative w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] lg:w-[240px] lg:h-[240px]">
             <Image
@@ -63,7 +63,7 @@ const Hero: React.FC<HeroProps> = () => {
               rotate: [-5, 5, -5, 5, 0],
               transition: { duration: 0.3 },
             }}
-            initial={{ y: -150 }}
+            initial={{ y: "-110%" }}
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 50 }}
             className="bg-main w-full h-full rounded-lg flex
