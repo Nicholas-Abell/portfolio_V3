@@ -9,7 +9,7 @@ type NavbarProps = {};
 
 const Navbar: React.FC<NavbarProps> = ({}) => {
   const [mobileNav, setMobileNav] = useState(false);
-  const [shadow, setShadow] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   const handleMobileNav = () => {
     setMobileNav(!mobileNav);
@@ -18,11 +18,16 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
-        setShadow(true);
-      } else setShadow(false);
+        setVisible(true);
+      } else setVisible(false);
     };
     window.addEventListener("scroll", handleShadow);
   }, []);
+
+  useEffect(() => {
+    if (mobileNav) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+  }, [mobileNav]);
 
   const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
 
@@ -33,11 +38,13 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
 
   return (
     <div
-      className={`${
-        shadow && "shadow shadow-gray-500"
-      } bg-darker text-light w-full fixed h-18 z-[100] hover:duration-200 ease-in no-print`}
+      className={
+        visible
+          ? "bg-darker text-light w-full fixed h-18 z-[100] hover:duration-200 ease-in no-print shadow shadow-gray-500"
+          : "hidden"
+      }
     >
-      <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
+      <div className="flex justify-between items-center w-full px-4 2xl:px-16">
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={() => scrollToTop()}
@@ -47,34 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             <h3>Home</h3>
           </button>
         </div>
-        <div>
-          <FramerMotionWrapper variant="fromTop" duration={0.8}>
-            <ul className="hidden md:flex font-bold">
-              <Link
-                href="/#projects"
-                scroll={true}
-                className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/#skills"
-                scroll={true}
-                className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
-              >
-                Skills
-              </Link>
-              <Link
-                href="/#contact"
-                scroll={true}
-                className="ml-10 uppercase hover:text-[#1251ff] cursor-pointer"
-              >
-                Contact
-              </Link>
-            </ul>
-          </FramerMotionWrapper>
-        </div>
-        <button onClick={handleMobileNav} className="md:hidden">
+        <button onClick={handleMobileNav}>
           <AiOutlineMenu
             size={25}
             className="cursor-pointer ease-in duration-200"
@@ -84,8 +64,8 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
 
       <div
         className={`${
-          mobileNav ? "w-[75%] sm:w-[60%]" : "w-0"
-        } fixed top-0 z-50 h-screen bg-darker ease-in-out duration-500 overflow-hidden`}
+          mobileNav ? "w-full" : "w-0"
+        } absolute top-0 left-0 z-50 h-screen bg-darker ease-in-out duration-500 overflow-hidden opacity-70`}
       >
         <div className="w-full flex justify-between items-center p-4 border-b-2 border-gray-400">
           <h1 className="dark:text-gray-100 text-black">Nick A</h1>
@@ -96,39 +76,21 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             <AiOutlineClose />
           </button>
         </div>
-        <div>
-          <ul className="flex flex-col w-full gap-12 mt-8">
-            <li className="ml-10 uppercase cursor-pointer">
-              <Link
-                href="/#projects"
-                scroll={true}
-                onClick={() => setMobileNav(false)}
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="ml-10 uppercase cursor-pointer">
-              <Link
-                href="/#skills"
-                scroll={true}
-                onClick={() => setMobileNav(false)}
-              >
-                Skills
-              </Link>
-            </li>
-            <li className="ml-10 uppercase cursor-pointer">
-              <Link
-                href="/#contact"
-                scroll={true}
-                onClick={() => setMobileNav(false)}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-        {/* <div className="pt-40">
-          <p>{"Let's Connect"}</p>
+        {/* <div className="w-full h-full flex justify-center items-center">
+          <div className="w-[80%] md:w-[50%] mx-auto grid grid-cols-3 gap-4 items-center">
+            <div className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
+            <div className="bg-blue-400 col-span-1 p-4"></div>
+            <div className="bg-blue-400 col-span-1 p-4"></div>
+            <div className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
+            <div className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
+            <div className="bg-blue-400 col-span-1 p-4"></div>
+            <div className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
+            <div className="bg-blue-400 col-span-1 p-4"></div>
+            <div className="bg-blue-400 col-span-1 p-4"></div>
+            <div className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
+            <div className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
+            <div className="bg-blue-400 col-span-1 p-4"></div>
+          </div>
         </div> */}
       </div>
     </div>
