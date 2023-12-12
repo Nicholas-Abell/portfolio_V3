@@ -82,18 +82,21 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             <div className="rounded-lg bg-darker col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
             <div className="rounded-lg bg-main col-span-1 z-10 border shadow-md shadow-gray-400 py-8"></div>
             <Link
+              onClick={handleMobileNav}
               href="#skills"
               className="rounded-lg bg-accent col-span-1 z-10 border shadow-md shadow-gray-400 py-6 text-center text-3xl font-bold"
             >
               Skills
             </Link>
             <Link
+              onClick={handleMobileNav}
               href="#projects"
               className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-6 text-center text-3xl font-bold"
             >
               Projects
             </Link>
             <Link
+              onClick={handleMobileNav}
               href="#contact"
               className="rounded-lg bg-main col-span-2 z-10 border shadow-md shadow-gray-400 py-6 text-center text-3xl font-bold"
             >
