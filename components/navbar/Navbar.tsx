@@ -15,12 +15,12 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
   };
 
   useEffect(() => {
-    const handleShadow = () => {
+    const handleVisible = () => {
       if (window.scrollY >= 90) {
         setVisible(true);
       } else setVisible(false);
     };
-    window.addEventListener("scroll", handleShadow);
+    window.addEventListener("scroll", handleVisible);
   }, []);
 
   useEffect(() => {
@@ -35,6 +35,11 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  function handleHome() {
+    if (mobileNav) setMobileNav(false);
+    scrollToTop();
+  }
+
   return (
     <div
       className={
@@ -46,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <div className="flex items-center justify-center gap-4">
           <button
-            onClick={() => scrollToTop()}
+            onClick={() => handleHome()}
             className="w-[100px] h-[45px] flex justify-center items-center gap-2 p-2 shadow-lg hover:shadow-xl rounded-xl uppercase"
           >
             <FaHome size={25} className="w-full h-full" />
@@ -81,33 +86,38 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             !mobileNav && "opacity-0"
           } w-full h-full flex justify-center items-center pb-32`}
         >
-          <div className="w-[80%] md:w-[50%] mx-auto grid grid-cols-3 gap-4 items-stretch">
-            <div className="rounded-lg bg-darker col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
-            <div className="rounded-lg bg-main col-span-1 z-10 border shadow-md shadow-gray-400 py-8"></div>
+          <div className="w-[80%] md:w-[50%] mx-auto grid grid-cols-4 gap-4 items-stretch">
+            <div className="rounded-lg bg-darker col-span-3 z-10 border shadow-md shadow-gray-400 py-8" />
+            <button
+              onClick={() => handleHome()}
+              className="rounded-lg bg-main col-span-1 z-10 border shadow-md shadow-gray-400 py-4 text-light flex justify-center items-center"
+            >
+              <FaHome size={40} />
+            </button>
             <Link
               onClick={handleMobileNav}
               href="#skills"
-              className="rounded-lg bg-accent col-span-1 z-10 border shadow-md shadow-gray-400 py-6 text-center text-3xl font-bold"
+              className="rounded-lg bg-accent col-span-2 z-10 border shadow-md shadow-gray-400 py-6 text-center text-lg md:text-3xl font-bold"
             >
               Skills
             </Link>
             <Link
               onClick={handleMobileNav}
               href="#projects"
-              className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-6 text-center text-3xl font-bold"
+              className="rounded-lg bg-darkAccent col-span-2 z-10 border shadow-md shadow-gray-400 py-6 text-center text-lg md:text-3xl font-bold"
             >
               Projects
             </Link>
             <Link
               onClick={handleMobileNav}
               href="#contact"
-              className="rounded-lg bg-main col-span-2 z-10 border shadow-md shadow-gray-400 py-6 text-center text-3xl font-bold"
+              className="rounded-lg bg-main col-span-3 z-10 border shadow-md shadow-gray-400 py-6 text-center text-lg md:text-3xl font-bold"
             >
               Contact
             </Link>
             <div className="rounded-lg bg-accent col-span-1 z-10 border shadow-md shadow-gray-400 py-8"></div>
             <div className="rounded-lg bg-darkAccent col-span-1 z-10 border shadow-md shadow-gray-400 py-8"></div>
-            <div className="rounded-lg bg-darker col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
+            <div className="rounded-lg bg-darker col-span-3 z-10 border shadow-md shadow-gray-400 py-8" />
           </div>
         </div>
       </div>
