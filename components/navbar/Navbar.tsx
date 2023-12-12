@@ -7,8 +7,8 @@ import { FaHome } from "react-icons/fa";
 type NavbarProps = {};
 
 const Navbar: React.FC<NavbarProps> = ({}) => {
-  const [mobileNav, setMobileNav] = useState(true);
-  const [visible, setVisible] = useState(true);
+  const [mobileNav, setMobileNav] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   const handleMobileNav = () => {
     setMobileNav(!mobileNav);
