@@ -13,11 +13,11 @@ const Hero: React.FC<HeroProps> = () => {
       <div className="grid grid-cols-3 col-span-3 sm:col-span-2 grid-rows-5 p-4 pb-0 sm:pb-4 sm:pr-2 gap-2 sm:gap-4">
         <div className="relative bg-gradient-to-r from-dark to-darker rounded-lg col-span-3 row-span-4 text-light p-4 md:p-12 xl:p-24 flex flex-col justify-between z-20">
           <div>
-            <p className="text-gray-300 text-xl lg:text-4xl font-bold">
+            <p className="text-gray-300 text-xl font-bold">
               Software Developer
             </p>
-            <h1 className="text-4xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-9xl font-bold text-main">
-              NICHOLAS <br className="hidden sm:block" /> ABELL
+            <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-main">
+              NICHOLAS ABELL
             </h1>
           </div>
           <div className="sm:ml-auto mt-auto bottom-0 right-0 text-sm lg:text-base xl:text-lg py-2 w-full sm:w-[60%] md:w-[40%] sm:h-[40%]">
