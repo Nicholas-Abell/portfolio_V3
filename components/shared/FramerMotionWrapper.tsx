@@ -30,14 +30,14 @@ const FramerMotionWrapper: React.FC<FramerMotionWrapperProps> = ({
     <div ref={ref} className={`overflow-hidden w-full ${className}`}>
       <motion.div
         variants={{
-          fromBottom: { y: 200, opacity: 0 },
-          fromTop: { y: -200, opacity: 0 },
-          fromLeft: { x: -200, opacity: 0 },
-          fromRight: { x: 200, opacity: 0 },
+          fromBottom: { y: 100, opacity: 0 },
+          fromTop: { y: -100, opacity: 0 },
+          fromLeft: { x: -100, opacity: 0 },
+          fromRight: { x: 100, opacity: 0 },
           visible: { y: 0, x: 0, opacity: 1 },
         }}
         animate={mainControls}
-        transition={{ duration: duration || 1.2 }}
+        transition={{ duration: duration || 0.7 }}
         initial={variant}
       >
         {children}
