@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaHome } from "react-icons/fa";
-import FramerMotionWrapper from "../shared/FramerMotionWrapper";
 
 type NavbarProps = {};
 
@@ -40,11 +39,11 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     <div
       className={
         visible
-          ? "bg-darker text-light w-full fixed h-18 z-[100] hover:duration-200 ease-in no-print shadow shadow-gray-500"
+          ? "bg-darker text-light w-full fixed h-12 z-[100] hover:duration-200 ease-in no-print shadow shadow-gray-500"
           : "hidden"
       }
     >
-      <div className="flex justify-between items-center w-full px-4 2xl:px-16">
+      <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={() => scrollToTop()}
@@ -67,17 +66,21 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
           mobileNav ? "w-full" : "w-0"
         } fixed top-0 left-0 pt-12 z-50 h-screen ease-in-out duration-500 overflow-hidden`}
       >
-        <div className="w-full h-full absolute top-0 left-0 bg-black/70"></div>
-        <div className="w-full flex justify-between items-center p-4 border-b-2 border-gray-400 bg-dark opacity-70">
+        <div className="w-full h-full absolute top-0 left-0 bg-black/70 -z-10"></div>
+        <div className="w-full flex justify-between items-center p-4 border-b-2 border-gray-400 text-light z-50">
           <h1 className="text-light">Nick A</h1>
           <button
             onClick={handleMobileNav}
-            className="p-3 rounded-full cursor-pointer"
+            className="p-3 rounded-xl cursor-pointer bg-main border shadow-sm shadow-gray-400"
           >
             <AiOutlineClose />
           </button>
         </div>
-        <div className="w-full h-full flex justify-center items-center pb-32">
+        <div
+          className={`${
+            !mobileNav && "opacity-0"
+          } w-full h-full flex justify-center items-center pb-32`}
+        >
           <div className="w-[80%] md:w-[50%] mx-auto grid grid-cols-3 gap-4 items-stretch">
             <div className="rounded-lg bg-darker col-span-2 z-10 border shadow-md shadow-gray-400 py-8" />
             <div className="rounded-lg bg-main col-span-1 z-10 border shadow-md shadow-gray-400 py-8"></div>
