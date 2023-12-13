@@ -45,35 +45,35 @@ const LoadTest: React.FC<LoadTestProps> = () => {
         <motion.div
           initial={{ y: 0 }}
           variants={loadAnimation}
-          className="bg-main rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
+          className="bg-darkAccent rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
         >
           <p className="text-light sm:text-4xl md:text-8xl font-bold">O</p>
         </motion.div>
         <motion.div
           initial={{ y: 0 }}
           variants={loadAnimation}
-          className="bg-main rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
+          className="bg-accent rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
         >
           <p className="text-light sm:text-4xl md:text-8xl font-bold">A</p>
         </motion.div>
         <motion.div
           initial={{ y: 0 }}
           variants={loadAnimation}
-          className="bg-main rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
+          className="bg-dark rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
         >
           <p className="text-light sm:text-4xl md:text-8xl font-bold">D</p>
         </motion.div>
         <motion.div
           initial={{ y: 0 }}
           variants={loadAnimation}
-          className="bg-main rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
+          className="bg-accent rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
         >
           <p className="text-light sm:text-4xl md:text-8xl font-bold">I</p>
         </motion.div>
         <motion.div
           initial={{ y: 0 }}
           variants={loadAnimation}
-          className="bg-main rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
+          className="bg-darkAccent rounded-lg shadow-md shadow-gray-400 w-[40px] h-[40px] sm:w-[80px] sm:h-[80px] md:w-[120px] md:h-[120px] flex justify-center items-center border"
         >
           <p className="text-light sm:text-4xl md:text-8xl font-bold">N</p>
         </motion.div>
