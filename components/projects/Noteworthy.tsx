@@ -22,6 +22,7 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
   githubLink,
   description,
 }) => {
+  const [loading, setLoading] = useState(true);
   const [overlay, setOverlay] = useState(false);
   return (
     <div
@@ -62,9 +63,13 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
         <Image
           src={image}
           alt={image}
+          onLoad={() => setLoading(false)}
           fill
           className="rounded-lg object-fill"
         />
+        {loading && (
+          <div className="w-full h-full animate-pulse bg-gray-400"></div>
+        )}
       </div>
     </div>
   );
