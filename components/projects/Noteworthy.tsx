@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CgWebsite } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
+import LoadingSkeleton from "../loaders/loadingSkeleton";
 
 type NoteworthyProps = {
   image: string;
@@ -67,9 +68,7 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
           fill
           className="rounded-lg object-fill"
         />
-        {loading && (
-          <div className="w-full h-full animate-pulse bg-gray-400"></div>
-        )}
+        {loading && <LoadingSkeleton />}
       </div>
     </div>
   );
