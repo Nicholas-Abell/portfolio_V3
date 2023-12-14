@@ -27,8 +27,8 @@ const Contact = () => {
           <h2 className="text-4xl md:text-6xl">Contact</h2>
         </div>
       </FramerMotionWrapper>
-      <FramerMotionWrapper variant="fromBottom" className="w-full p-4">
-        <div className="grid lg:grid-cols-5 gap-8 mx-auto">
+      <FramerMotionWrapper variant="fromBottom" className="w-full p-1 sm:p-4">
+        <div className="grid lg:grid-cols-5 gap-8 mx-auto w-full">
           <div className="col-span-3 lg:col-span-2 grid grid-cols-3 grid-rows-4 text-center gap-4">
             <div className="h-full w-full row-span-3 col-span-3 border shadow-md shadow-gray-400 bg-gradient-to-r from-dark to-darker text-light rounded-xl z-10">
               <div className="w-full h-auto flex justify-center items-center py-8">
