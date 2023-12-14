@@ -4,7 +4,7 @@ import Image from "next/image";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import LoadingSkeleton from "../loaders/loadingSkeleton";
+import LoadingSkeleton from "../loaders/LoadingSkeleton";
 
 type HeroProps = {};
 

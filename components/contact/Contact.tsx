@@ -6,7 +6,7 @@ import FramerMotionWrapper from "../shared/FramerMotionWrapper";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import LoadingSkeleton from "../loaders/loadingSkeleton";
+import LoadingSkeleton from "../loaders/LoadingSkeleton";
 
 const Contact = () => {
   const [loading, setLoading] = useState(true);
