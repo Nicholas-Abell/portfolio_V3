@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import { FaLink } from "react-icons/fa";
 
@@ -19,13 +20,17 @@ const Card: React.FC<CardProps> = ({
   image,
   siteTitle,
 }) => {
+  const [loading, setLoading] = useState(true);
   return (
     <div className="flex flex-col items-center drop-shadow-lg shadow-darkAccent">
       <Image
         src={image}
         width={160}
         height={160}
-        className=" rounded-full translate-y-1/2 border-8 border-light border-solid"
+        onLoad={() => setLoading(false)}
+        className={`rounded-full translate-y-1/2 border-8 border-light border-solid ${
+          loading && "animate-pulse bg-gray-400"
+        }`}
         alt={name}
         placeholder="blur"
         blurDataURL={image}
