@@ -6,7 +6,6 @@ import FramerMotionWrapper from "../shared/FramerMotionWrapper";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import LoadingSkeleton from "../loaders/loadingSkeleton";
 
 const Contact = () => {
   const [loading, setLoading] = useState(true);
@@ -38,10 +37,11 @@ const Contact = () => {
                   alt="profile"
                   height={280}
                   width={280}
-                  className="rounded-xl"
-                  onLoad={() => setLoading(true)}
+                  className={`${
+                    loading && "bg-gray-400 animate-pulse"
+                  } rounded-xl`}
+                  onLoad={() => setLoading(false)}
                 />
-                {loading && <LoadingSkeleton />}
               </div>
               <div className="py-8">
                 <h2 className="py-4 text-main">Nick Abell</h2>

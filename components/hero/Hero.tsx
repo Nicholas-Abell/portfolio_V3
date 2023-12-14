@@ -4,7 +4,6 @@ import Image from "next/image";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import LoadingSkeleton from "../loaders/loadingSkeleton";
 
 type HeroProps = {};
 
@@ -52,10 +51,11 @@ const Hero: React.FC<HeroProps> = () => {
               src="/profile.png"
               alt="profile"
               fill
-              className=" object-fill rounded-lg"
+              className={`${
+                loading && "bg-gray-400 animate-pulse object-fill"
+              } rounded-xl`}
               onLoad={() => setLoading(false)}
             />
-            {loading && <LoadingSkeleton />}
           </div>
         </div>
         <div className="bg-accent row-span-3 rounded-lg block sm:hidden z-10 border shadow-md shadow-gray-400" />
