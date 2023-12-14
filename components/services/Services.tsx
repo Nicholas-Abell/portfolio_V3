@@ -26,28 +26,28 @@ const Services: React.FC<ServicesProps> = () => {
           <Card
             title="Web Development"
             icon={<FiChevronsUp size={25} />}
-            emphasis="I don't just build websites."
+            emphasis="I don't just build websites. "
             description="I build high-performing mobile responsive websites that are not only beautiful, but user friendly."
             bgColor="bg-blue-200"
           />
           <Card
             title="Seo"
             icon={<MdOutlineWifiTethering size={25} />}
-            emphasis="Reach a wider audience."
+            emphasis="Reach a wider audience. "
             description="Using proven seo methods I can help customers find your website on Google and other popular search engines."
             bgColor="bg-red-200"
           />
           <Card
             title="Figma Conversion"
             icon={<FaFigma size={25} />}
-            emphasis="I will convert your designs"
+            emphasis="I will convert your designs "
             description="into a fully functional and mobiles responsive website using React and Tailwind Css."
             bgColor="bg-yellow-200"
           />
           <Card
             title="Google Sheets"
             icon={<SiGooglesheets size={25} />}
-            emphasis="Have Google Sheets work for you!"
+            emphasis="Have Google Sheets work for you! "
             description="Let me automate your workflow. Using Apps Script and inline functions I can make your work easier than ever."
             bgColor="bg-green-200"
           />
