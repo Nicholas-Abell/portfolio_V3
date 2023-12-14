@@ -51,6 +51,7 @@ const Contact = () => {
             <Link
               href="https://github.com/Nicholas-Abell"
               className="row-span-2 z-[2]"
+              aria-label="github"
             >
               <motion.div
                 whileHover={{
@@ -69,6 +70,7 @@ const Contact = () => {
             <Link
               href="https://www.linkedin.com/in/nicholas-abell-348807192/"
               className="row-span-2 z-[1]"
+              aria-label="linkedin"
             >
               <motion.div
                 whileHover={{
@@ -86,7 +88,11 @@ const Contact = () => {
                 <SiLinkedin size={45} className="text-light" />
               </motion.div>
             </Link>
-            <Link href="mailto:nicholaswabell@gmail.com" className="row-span-2">
+            <Link
+              href="mailto:nicholaswabell@gmail.com"
+              className="row-span-2"
+              aria-label="gmail"
+            >
               <motion.div
                 whileHover={{
                   rotate: [-5, 5, -5, 5, 0],
@@ -183,6 +189,7 @@ const Contact = () => {
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
           className="w-full flex justify-center bg-dark text-light py-12 shadow-lg shadow-gray-400 border rounded-xl"
+          aria-label="back to top"
         >
           <HiChevronDoubleUp size={30} className="m-auto" />
         </motion.button>

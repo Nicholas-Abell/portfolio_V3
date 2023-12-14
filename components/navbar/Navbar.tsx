@@ -77,6 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
           <button
             onClick={handleMobileNav}
             className="p-3 rounded-xl cursor-pointer bg-main border shadow-sm shadow-gray-400"
+            aria-label="open nav"
           >
             <AiOutlineClose />
           </button>

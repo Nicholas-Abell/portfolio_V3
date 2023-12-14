@@ -62,6 +62,7 @@ const Hero: React.FC<HeroProps> = () => {
         <Link
           href="https://github.com/Nicholas-Abell"
           className="row-span-2 sm:row-span-1 z-[2]"
+          aria-label="github"
         >
           <motion.div
             whileHover={{
@@ -80,6 +81,7 @@ const Hero: React.FC<HeroProps> = () => {
         <Link
           href="https://www.linkedin.com/in/nicholas-abell-348807192/"
           className="row-span-2 sm:row-span-1 z-[1]"
+          aria-label="linkedin"
         >
           <motion.div
             whileHover={{
@@ -100,6 +102,7 @@ const Hero: React.FC<HeroProps> = () => {
         <Link
           href="mailto:nicholaswabell@gmail.com"
           className="row-span-2 sm:row-span-1"
+          aria-label="gmail"
         >
           <motion.div
             whileHover={{
