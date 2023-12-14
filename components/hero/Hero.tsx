@@ -1,13 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import LoadingSkeleton from "../loaders/loadingSkeleton";
 
 type HeroProps = {};
 
 const Hero: React.FC<HeroProps> = () => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <section className="w-full min-h-screen bg-light text-light grid grid-cols-3 relative">
       <div className="grid grid-cols-3 col-span-3 sm:col-span-2 grid-rows-5 p-4 pb-0 sm:pb-4 sm:pr-2 gap-2 sm:gap-4">
@@ -50,7 +53,9 @@ const Hero: React.FC<HeroProps> = () => {
               alt="profile"
               fill
               className=" object-fill rounded-lg"
+              onLoad={() => setLoading(false)}
             />
+            {loading && <LoadingSkeleton />}
           </div>
         </div>
         <div className="bg-accent row-span-3 rounded-lg block sm:hidden z-10 border shadow-md shadow-gray-400" />

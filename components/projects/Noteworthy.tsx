@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CgWebsite } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
+import LoadingSkeleton from "../loaders/loadingSkeleton";
 
 type NoteworthyProps = {
   image: string;
@@ -22,6 +23,7 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
   githubLink,
   description,
 }) => {
+  const [loading, setLoading] = useState(true);
   const [overlay, setOverlay] = useState(false);
   return (
     <div
@@ -62,9 +64,11 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
         <Image
           src={image}
           alt={image}
+          onLoad={() => setLoading(false)}
           fill
           className="rounded-lg object-fill"
         />
+        {loading && <LoadingSkeleton />}
       </div>
     </div>
   );
