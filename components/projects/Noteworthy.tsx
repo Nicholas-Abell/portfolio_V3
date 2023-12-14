@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CgWebsite } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
-import LoadingSkeleton from "../loaders/loadingSkeleton";
+import LoadingSkeleton from "../loaders/LoadingSkeleton";
 
 type NoteworthyProps = {
   image: string;
