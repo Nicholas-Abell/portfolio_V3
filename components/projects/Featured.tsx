@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { CgWebsite } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 import FramerMotionWrapper from "../shared/FramerMotionWrapper";
-import { inView, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
 type FeaturedProps = {
   title: string;

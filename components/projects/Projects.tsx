@@ -25,6 +25,7 @@ const Projects: React.FC<ProjectsProps> = () => {
       <Featured
         title="Dating App"
         githubLink="https://github.com/Nicholas-Abell/dating_app"
+        liveLink="https://dating-app-nicholas-abell.vercel.app/"
         description="A full stack dating application implementing Next Js server
         actions. Features include: user registration, profile Management,
         messaging, and filtering based on user preferences."
