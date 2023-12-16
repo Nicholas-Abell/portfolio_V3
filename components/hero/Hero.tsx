@@ -23,8 +23,8 @@ const Hero: React.FC<HeroProps> = () => {
             </div>
           </div>
           <motion.div
-            whileHover={{ y: "-5%", transition: { delay: 0 } }}
-            whileTap={{ scale: 0.9, transition: { delay: 0 } }}
+            // whileHover={{ y: "-5%", transition: { delay: 0 } }}
+            // whileTap={{ scale: 0.9, transition: { delay: 0 } }}
             initial={{ y: "-200%" }}
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 60 }}
@@ -45,8 +45,8 @@ const Hero: React.FC<HeroProps> = () => {
           className="row-span-4 col-span-3 grid grid-cols-3 gap-2"
         >
           <motion.div
-            whileHover={{ y: "-5%", transition: { delay: 0 } }}
-            whileTap={{ scale: 0.9, transition: { delay: 0 } }}
+            // whileHover={{ y: "-5%", transition: { delay: 0 } }}
+            // whileTap={{ scale: 0.9, transition: { delay: 0 } }}
             initial={{ x: "115%" }}
             animate={{ x: 0, transition: { delay: 1 } }}
             transition={{ type: "spring", stiffness: 60 }}
@@ -60,8 +60,8 @@ const Hero: React.FC<HeroProps> = () => {
             </Link>
           </motion.div>
           <motion.div
-            whileHover={{ y: "-5%", transition: { delay: 0 } }}
-            whileTap={{ scale: 0.9, transition: { delay: 0 } }}
+            // whileHover={{ y: "-5%", transition: { delay: 0 } }}
+            // whileTap={{ scale: 0.9, transition: { delay: 0 } }}
             className="rounded-lg text-xl font-bold bg-darkAccent col-span-2 row-span-2 z-10 border shadow-md shadow-gray-400"
           >
             <Link
