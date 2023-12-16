@@ -13,35 +13,66 @@ const Hero: React.FC<HeroProps> = () => {
   return (
     <section className="w-full min-h-screen bg-light text-light grid grid-cols-3 relative">
       <div className="grid grid-cols-3 col-span-3 sm:col-span-2 grid-rows-5 p-4 pb-0 sm:pb-4 sm:pr-2 gap-2 sm:gap-4">
-        <div className="relative bg-gradient-to-r from-dark to-darker rounded-lg col-span-3 row-span-4 text-light p-4 md:p-12 xl:p-24 flex flex-col justify-between z-20">
-          <div>
-            <p className="text-gray-300 text-xl font-bold">
+        <div className="relative rounded-lg col-span-3 row-span-4 text-light grid grid-cols-3 grid-rows-3 z-20 gap-4">
+          {/* \            <p className="text-gray-300 text-xl font-bold">
               Software Developer
-            </p>
-            <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-main">
-              NICHOLAS ABELL
-            </h1>
+            </p> */}
+          <div className=" col-span-3 row-span-2 flex items-center justify-center text-center bg-gradient-to-r from-dark to-darker rounded-br-lg">
+            <div className="text-left">
+              <p>Software Developer</p>
+              <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-light">
+                NICHOLAS ABELL
+              </h1>
+            </div>
           </div>
-          <div className="sm:ml-auto mt-auto bottom-0 right-0 text-sm lg:text-base xl:text-lg py-2 w-full sm:w-[60%] md:w-[40%] sm:h-[40%]">
-            <p>
-              I am a passionate software developer dedicated to solving
-              real-world problems through innovative solutions.
-            </p>
-          </div>
+          <motion.div
+            whileHover={{ y: "-5%", transition: { delay: 0 } }}
+            whileTap={{ scale: 0.9, transition: { delay: 0 } }}
+            className="rounded-lg text-xl font-bold bg-accent col-span-3 row-span-2 z-10 border shadow-md shadow-gray-400"
+          >
+            <Link
+              href="/#projects"
+              className="w-full h-full flex justify-center items-center"
+            >
+              PROJECTS
+            </Link>
+          </motion.div>
+          {/* <div className="bg-light w-full h-full col-span-3 row-span-1 grid grid-cols-3">
+          </div> */}
         </div>
         <motion.div
-          initial={{ y: "-200%" }}
+          initial={{ y: "-220%" }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
           className="row-span-4 col-span-3 grid grid-cols-3 gap-2"
         >
           <motion.div
+            whileHover={{ y: "-5%", transition: { delay: 0 } }}
+            whileTap={{ scale: 0.9, transition: { delay: 0 } }}
             initial={{ x: "115%" }}
-            animate={{ x: 0 }}
-            transition={{ type: "spring", stiffness: 60, delay: 1 }}
-            className="bg-main rounded-lg row-span-2 border shadow-md shadow-gray-400"
-          />
-          <div className="rounded-lg bg-darkAccent col-span-2 row-span-2 z-10 border shadow-md shadow-gray-400" />
+            animate={{ x: 0, transition: { delay: 1 } }}
+            transition={{ type: "spring", stiffness: 60 }}
+            className="bg-main rounded-lg row-span-2 border shadow-md shadow-gray-400 text-xl font-bold"
+          >
+            <Link
+              className="w-full h-full flex justify-center items-center"
+              href={"/#skills"}
+            >
+              SKILLS
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ y: "-5%", transition: { delay: 0 } }}
+            whileTap={{ scale: 0.9, transition: { delay: 0 } }}
+            className="rounded-lg text-xl font-bold bg-darkAccent col-span-2 row-span-2 z-10 border shadow-md shadow-gray-400"
+          >
+            <Link
+              href={"/#contact"}
+              className="w-full h-full flex justify-center items-center"
+            >
+              CONTACT
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
       <div className="h-full grid-cols-3 grid-rows-6 grid gap-2 xl:gap-3 p-4 pt-2 sm:pt-4 pl-2 col-span-3 sm:col-span-1">
