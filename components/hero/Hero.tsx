@@ -14,9 +14,6 @@ const Hero: React.FC<HeroProps> = () => {
     <section className="w-full min-h-screen bg-light text-light grid grid-cols-3 relative">
       <div className="grid grid-cols-3 col-span-3 sm:col-span-2 grid-rows-5 p-4 pb-0 sm:pb-4 sm:pr-2 gap-2 sm:gap-4">
         <div className="relative rounded-lg col-span-3 row-span-4 text-light grid grid-cols-3 grid-rows-3 z-20 gap-4">
-          {/* \            <p className="text-gray-300 text-xl font-bold">
-              Software Developer
-            </p> */}
           <div className=" col-span-3 row-span-2 flex items-center justify-center text-center bg-gradient-to-r from-dark to-darker rounded-br-lg">
             <div className="text-left">
               <p>Software Developer</p>
@@ -37,11 +34,9 @@ const Hero: React.FC<HeroProps> = () => {
               PROJECTS
             </Link>
           </motion.div>
-          {/* <div className="bg-light w-full h-full col-span-3 row-span-1 grid grid-cols-3">
-          </div> */}
         </div>
         <motion.div
-          initial={{ y: "-220%" }}
+          initial={{ y: "-250%" }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 50 }}
           className="row-span-4 col-span-3 grid grid-cols-3 gap-2"
@@ -100,7 +95,7 @@ const Hero: React.FC<HeroProps> = () => {
               rotate: [-5, 5, -5, 5, 0],
               transition: { duration: 0.3 },
             }}
-            initial={{ y: "-110%" }}
+            initial={{ y: "-115%" }}
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 50 }}
             className="bg-main w-full h-full rounded-lg flex
@@ -119,7 +114,7 @@ const Hero: React.FC<HeroProps> = () => {
               rotate: [5, -5, 5, -5, 0],
               transition: { duration: 0.3 },
             }}
-            initial={{ x: "-105%", y: "-110%" }}
+            initial={{ x: "-105%", y: "-115%" }}
             animate={{ x: 0, y: 0 }}
             transition={{
               y: { type: "spring", stiffness: 50, delay: 0 },
@@ -140,7 +135,7 @@ const Hero: React.FC<HeroProps> = () => {
               rotate: [-5, 5, -5, 5, 0],
               transition: { duration: 0.3 },
             }}
-            initial={{ y: "-110%" }}
+            initial={{ y: "-115%" }}
             animate={{ y: 0 }}
             transition={{ type: "spring", stiffness: 50, delay: 1 }}
             className="bg-darkAccent w-full h-full rounded-lg flex
