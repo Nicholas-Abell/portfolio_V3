@@ -17,6 +17,7 @@ import {
   SiSquarespace,
   SiGithub,
   SiGit,
+  SiMysql,
 } from "react-icons/si";
 
 export const frontEnd = [
@@ -56,12 +57,12 @@ export const backEnd = [
     icon: <SiMongodb style={{ color: "green" }} size={50} />,
   },
   {
-    name: "Node JS",
-    icon: <FaNodeJs style={{ color: "green" }} size={50} />,
+    name: "MySql",
+    icon: <SiMysql style={{ color: "blue" }} size={50} />,
   },
   {
-    name: "Express",
-    icon: <SiExpress style={{ color: "green" }} size={50} />,
+    name: "Node JS",
+    icon: <FaNodeJs style={{ color: "green" }} size={50} />,
   },
   {
     name: "Mongoose",
